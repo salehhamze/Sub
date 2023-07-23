@@ -31,10 +31,6 @@ vmess://eyJhZGQiOiIxNTcuMjQ1Ljg1LjE0MCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJo
 vmess://eyJhZGQiOiIxNjQuOTIuNjUuNDQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6Im1paGFud2ViaG9zdC5jb20iLCJpZCI6ImRiNWFmYWU0LWFjMjMtNDFhNi04Mzc4LWYzMDdhOWE0NzQzNiIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6Ijg4ODEiLCJwcyI6IjPwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiaHR0cCIsInYiOiIyIn0=
 vmess://eyJhZGQiOiIxNjQuOTIuNjUuNDQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6Im1vaS5pciIsImlkIjoiZGI1YWZhZTQtYWMyMy00MWE2LTgzNzgtZjMwN2E5YTQ3NDM2IiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiODg4MSIsInBzIjoiNPCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJodHRwIiwidiI6IjIifQ==
 vless://ac4e2c70-d86f-4ace-d50d-14218ec66e19@sp7.kiava.fun:8443?path=%2F&security=tls&encryption=none&alpn=http/1.1&host=sp7.kiava.fun&fp=chrome&type=ws&sni=sp7.kiava.fun#%F0%9F%87%B8%F0%9F%87%AA%E2%AD%904
-vless://Parsashonam-8@104.31.16.192:2087?mode=gun&security=tls&encryption=none&type=grpc&serviceName=&sni=usa.Tel-Parsashonam.site#%F0%9F%87%BA%F0%9F%87%B8%C2%B9
-vless://Telegram-Parsashonam-0@136.244.87.193:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=&sni=usa.Tel-Parsashonam.site#%F0%9F%87%BA%F0%9F%87%B8%C2%B2
-vless://Parsashonam-8@104.31.16.65:2087?mode=gun&security=tls&encryption=none&type=grpc&serviceName=&sni=usa.Tel-Parsashonam.site#%F0%9F%87%BA%F0%9F%87%B8%C2%B3
-vless://Telegram-Parsashonam-0@8.208.13.33:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=&sni=usa.Tel-Parsashonam.site#%F0%9F%87%BA%F0%9F%87%B8%E2%81%B4
 vless://112Parsashonam@136.244.87.193:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=cloud2.tel-Parsashonam.fun#%F0%9F%87%A9%F0%9F%87%AA%C2%B9
 vless://Telegram-Parsashonam-0@104.31.16.192:2083?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=cloud2.tel-Parsashonam.fun#%F0%9F%87%A9%F0%9F%87%AA%C2%B2
 vless://112Parsashonam@8.208.13.33:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=cloud2.tel-Parsashonam.fun#%F0%9F%87%A9%F0%9F%87%AA%C2%B3
