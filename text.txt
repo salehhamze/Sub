@@ -48,9 +48,9 @@ vless://Telegram-Parsashonam-0@136.244.87.193:2083?mode=gun&security=tls&encrypt
 vless://Telegram-Parsashonam-0@104.31.16.192:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=&sni=usa.Tel-Parsashonam.site#%F0%9F%87%BA%F0%9F%87%B2+%C2%B2
 vless://Telegram-Parsashonam-0@8.208.13.33:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=&sni=usa.Tel-Parsashonam.site#%F0%9F%87%BA%F0%9F%87%B2+%C2%B3
 vless://Telegram-Parsashonam-0@104.31.16.65:2083?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=&sni=usa.Tel-Parsashonam.site#%F0%9F%87%BA%F0%9F%87%B8%E2%81%B4
-vless://113Parsashonam@136.244.87.193:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=cloud2.tel-Parsashonam.fun#%F0%9F%87%A9%F0%9F%87%AA%C2%B9
+vless://115Parsashonam@136.244.87.193:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=cloud2.tel-Parsashonam.fun#%F0%9F%87%A9%F0%9F%87%AA%C2%B9
 vless://Telegram-Parsashonam-0@104.31.16.192:2083?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=cloud2.tel-Parsashonam.fun#%F0%9F%87%A9%F0%9F%87%AA%C2%B2
-vless://113Parsashonam@8.208.13.33:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=cloud2.tel-Parsashonam.fun#%F0%9F%87%A9%F0%9F%87%AA%C2%B3
+vless://115Parsashonam@8.208.13.33:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=cloud2.tel-Parsashonam.fun#%F0%9F%87%A9%F0%9F%87%AA%C2%B3
 vless://Telegram-Parsashonam-0@104.31.16.65:2083?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=cloud2.tel-Parsashonam.fun#%F0%9F%87%A9%F0%9F%87%AA%E2%81%B4
 vless://ac4e2c70-d86f-4ace-d50d-14218ec66e19@sp7.kiava.fun:8443?path=%2F&security=tls&encryption=none&alpn=http/1.1&host=sp7.kiava.fun&fp=chrome&type=ws&sni=sp7.kiava.fun#%F0%9F%87%B8%F0%9F%87%AA%E2%AD%904
 vless://698fb5db-a510-426d-a1e2-bd19bde924bf@arzdigital.com:8080?path=%2F&security=none&encryption=none&host=service1.karop.homes&type=ws#US%F0%9F%87%BA%F0%9F%87%B8+%D9%85%D9%86%D9%87%D8%A7%DB%8C+%D9%87%D9%85%D8%B1%D8%A7%D9%87+%D8%A7%D9%88%D9%84
