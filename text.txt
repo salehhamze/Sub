@@ -119,3 +119,4 @@ vless://Parsashonam-39@8.208.13.33:2087?mode=gun&security=tls&encryption=none&ty
 vless://144Parsashonam@45.67.215.70:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=De0.Parsashonam.Tech#%F0%9F%87%A9%F0%9F%87%AA+%F0%9F%8C%9F+18
 vless://144Parsashonam@185.170.166.31:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=De0.Parsashonam.Tech#%F0%9F%87%A9%F0%9F%87%AA+%F0%9F%8C%9F+20
 vless://144Parsashonam@199.181.197.64:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=De0.Parsashonam.Tech#%F0%9F%87%A9%F0%9F%87%AA+%F0%9F%8C%9F+21
+vless://144Parsashonam@8.208.13.33:2087?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@Parsashonam&sni=De0.Parsashonam.Tech#%F0%9F%87%A9%F0%9F%87%AA%C2%B3
