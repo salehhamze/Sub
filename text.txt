@@ -121,40 +121,40 @@ vless://--Parsashonam--@mtn4.Tel-Parsashonam.Website:2087?mode=gun&security=tls&
 
 vless://Parsashonam-31@Cloud.Tel-Parsashonam.Website:443?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸1✨-همه‌اوپراتورها
 
-vless://Parsashonam-31@Mci0.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci0.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸2✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mci1.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci1.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸3✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mci2.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci2.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸4✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mci3.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci3.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸5✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mci4.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci4.Tel-Parsashonam.Website:2053?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸6✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mtn1.Tel-Parsashonam.Website:2096?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸✨-ایرانسل‌وایفای‌رایتل
+vless://Parsashonam-31@Mtn1.Tel-Parsashonam.Website:2096?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸7✨-ایرانسل‌وایفای‌رایتل
 
-vless://Parsashonam-31@Mtn2.Tel-Parsashonam.Website:2096?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸✨-ایرانسل‌وایفای‌رایتل
+vless://Parsashonam-31@Mtn2.Tel-Parsashonam.Website:2096?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸8✨-ایرانسل‌وایفای‌رایتل
 
-vless://Parsashonam-31@Mtn3.Tel-Parsashonam.Website:2096?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸✨-ایرانسل‌وایفای‌رایتل
+vless://Parsashonam-31@Mtn3.Tel-Parsashonam.Website:2096?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸9✨-ایرانسل‌وایفای‌رایتل
 
-vless://Parsashonam-31@Mtn4.Tel-Parsashonam.Website:2096?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸✨-ایرانسل‌وایفای‌رایتل
+vless://Parsashonam-31@Mtn4.Tel-Parsashonam.Website:2096?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=Usa1.Parsashonam.Tech#🇺🇸10✨-ایرانسل‌وایفای‌رایتل
 
 vless://Parsashonam-31@Cloud.Tel-Parsashonam.Website:2096?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪1✨-همه‌اوپراتورها
 
-vless://Parsashonam-31@Mci0.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci0.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪2✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mci1.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci1.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪3✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mci2.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci2.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪4✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mci3.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci3.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪5✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mci4.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪✨-همراه‌اول‌وایفای
+vless://Parsashonam-31@Mci4.Tel-Parsashonam.Website:2087?type=grpc&serviceName=%40Parsashonam&security=tls&fp=&alpn=&sni=De1.Parsashonam.Tech#🇩🇪6✨-همراه‌اول‌وایفای
 
-vless://Parsashonam-31@Mtn1.Tel-Parsashonam.Website:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@Parsashonam&sni=De1.Parsashonam.Tech#🇩🇪✨-ایرانسل‌وایفای‌رایتل
+vless://Parsashonam-31@Mtn1.Tel-Parsashonam.Website:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@Parsashonam&sni=De1.Parsashonam.Tech#🇩🇪7✨-ایرانسل‌وایفای‌رایتل
 
-vless://Parsashonam-31@Mtn2.Tel-Parsashonam.Website:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@Parsashonam&sni=De1.Parsashonam.Tech#🇩🇪✨-ایرانسل‌وایفای‌رایتل
+vless://Parsashonam-31@Mtn2.Tel-Parsashonam.Website:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@Parsashonam&sni=De1.Parsashonam.Tech#🇩🇪8✨-ایرانسل‌وایفای‌رایتل
 
-vless://Parsashonam-31@Mtn3.Tel-Parsashonam.Website:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@Parsashonam&sni=De1.Parsashonam.Tech#🇩🇪✨-ایرانسل‌وایفای‌رایتل
+vless://Parsashonam-31@Mtn3.Tel-Parsashonam.Website:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@Parsashonam&sni=De1.Parsashonam.Tech#🇩🇪9✨-ایرانسل‌وایفای‌رایتل
 
-vless://Parsashonam-31@Mtn4.Tel-Parsashonam.Website:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@Parsashonam&sni=De1.Parsashonam.Tech#🇩🇪✨-ایرانسل‌وایفای‌رایتل
+vless://Parsashonam-31@Mtn4.Tel-Parsashonam.Website:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@Parsashonam&sni=De1.Parsashonam.Tech#🇩🇪10✨-ایرانسل‌وایفای‌رایتل
