@@ -9,7 +9,7 @@ vless://61c1477e-d8ec-4cd0-866e-ca72a3450acb@89.23.103.80:443?mode=gun&security=
 vless://2288abe1-04a3-497d-8f8e-9c5f29c61275@135.181.152.242:443?mode=gun&security=reality&encryption=none&pbk=SQ4X51JrHzzX7zkRUQZqAXg2ihoCfr7W-PA5coSAbF8&fp=chrome&spx=%2F&type=grpc&serviceName=Telegram:@melov2ray,Telegram:@melov2ray,Telegram:@melov2ray,Telegram:@melov2ray,Telegram:@melov2ray,Telegram:@melov2ray,Telegram:@melov2ray&sni=eset.com&sid=a8399439#42%F0%9F%92%8E%F0%9F%8C%9E%F0%9F%87%AB%F0%9F%87%AE
 vless://dalidalton@45.158.15.229:443?mode=gun&security=reality&encryption=none&pbk=NNs9WfQx9ouW5BpRjH9WJB4gBXKSCV3wKRRDHR-xgEY&fp=firefox&spx=%2F&type=grpc&serviceName=Telegram:@vpn_xw-Telegram:@vpn_xw-Telegram:@vpn_xw-Telegram:@vpn_xw-Telegram:@vpn_xw-Telegram:@vpn_xw-Telegram:@vpn_xw-Telegram:@vpn_xw-Telegram:@vpn_xw-Telegram:@vpn_xw&sni=bus.biletyplus.com.tr&sid=95094ddb#40%F0%9F%87%B9%F0%9F%87%B7%E2%9C%A8%F0%9F%92%8E
 
-vless://eaee16f3-2545-4e65-9584-2b25e9eb4ae6@tel.ArV2ray.host:443?path=%2F&security=tls&encryption=none&host=ArV2ray.AbrArvan.link&type=ws&sni=ArV2ray.AbrArvan.link#✅🇩🇪⭐️500
+vless://eaee16f3-2545-4e65-9584-2b25e9eb4ae6@tel.ArV2ray.host:443?path=%2F&security=tls&encryption=none&host=ArV2ray.AbrArvan.link&type=ws&sni=ArV2ray.AbrArvan.link#✅🇩🇪⭐️50
 
 vless://0a388d2f-2191-4a81-a1e4-ab971c6ec71c@tel.ArV2ray.host:443?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray&sni=tel.ArV2ray.fun#✅²🇩🇪⭐️50
 
