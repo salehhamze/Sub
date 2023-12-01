@@ -1,7 +1,7 @@
 ss://YWVzLTI1Ni1nY206QHZtZXNzcHY=@telegram.me:80#%40vmesspv+%D9%88%D9%82%D8%AA%DB%8C+%D9%82%D8%B7%D8%B9+%D8%B4%D8%AF%D8%8C+%D9%81%DB%8C%D9%84%D8%AA%D8%B1%D8%B4%DA%A9%D9%86+%D9%82%D8%B7%D8%B9+%D8%A8%D8%B4%D9%87+%D9%88+%D8%A2%D9%BE%D8%AF%DB%8C%D8%AA+%D9%88+%D8%AA%D8%B3%D8%AA+%D8%A8%DA%AF%DB%8C%D8%B1%DB%8C%D8%AF
+vless://a7b97746-ed60-46bf-8ef8-9674440a52af@canva.com:2053?security=tls&sni=pingpong.seyyedmt-gamer.tech&fp=firefox&type=grpc&serviceName=Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMTTelegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT&encryption=none#🇩🇪✨💎3
+
 vless://36333381-264c-4250-a275-5b2a2fbab779@free.pandavpn.tech:443?path=%2F&security=tls&encryption=none&host=84g3xm8awaauv8qf7gntsaqnprz4sejq6bq7y7dyqwisfd36avhhuyt73rcvewr.kgkbd.workers.Dev&type=ws&sni=84g3xm8awaauv8qf7gntsaqnprz4sejq6bq7y7dyqwisfd36avhhuyt73rcvewr.kgkbd.workers.Dev#🇩🇪🔆2
-
-
 vless://78a21ddc-dc26-4a8a-85fd-9ec5d8729955@13.48.6.186:8443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=ddragon.leagueoflegends.com&fp=chrome&pbk=EtKL2w9pJYnEtpbtTRGg6gsaEVX-8lF_u68rSZtPATM&sid=34&spx=%2F&type=tcp&headerType=none#384🌟🇸🇪¹
 
 vless://78a21ddc-dc26-4a8a-85fd-9ec5d8729955@13.48.196.240:8443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=ddragon.leagueoflegends.com&fp=chrome&pbk=vnAcaw8vcG6ScK4WxXEKF_6_CRUzsgfwmqP63rvbxHQ&sid=34&spx=%2F&type=tcp&headerType=none#384🌟🇸🇪²
