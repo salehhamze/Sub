@@ -1,4 +1,7 @@
 ss://YWVzLTI1Ni1nY206QHZtZXNzcHY=@telegram.me:80#%40vmesspv+%D9%88%D9%82%D8%AA%DB%8C+%D9%82%D8%B7%D8%B9+%D8%B4%D8%AF%D8%8C+%D9%81%DB%8C%D9%84%D8%AA%D8%B1%D8%B4%DA%A9%D9%86+%D9%82%D8%B7%D8%B9+%D8%A8%D8%B4%D9%87+%D9%88+%D8%A2%D9%BE%D8%AF%DB%8C%D8%AA+%D9%88+%D8%AA%D8%B3%D8%AA+%D8%A8%DA%AF%DB%8C%D8%B1%DB%8C%D8%AF
+vless://43f47a5e-1d31-459f-a19c-17b1b3f34176@tel.ArV2ray.host:443?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray&sni=tm.ArV2ray.shop#✅90💎⁵🇫🇮⭐️
+
+vless://43f47a5e-1d31-459f-a19c-17b1b3f34176@all.ArV2ray.host:443?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&type=grpc&serviceName=@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray&sni=tm.ArV2ray.shop#✅90💎⁶🇫🇮⭐️
 vless://ed6bd4a1-d4d4-4244-ad46-f0390483fa74@5.161.151.69:443?encryption=none&security=reality&sni=greenpepper.ir&serviceName=@Everyday_VPN&fp=chrome&pbk=N56r3Trm3uXikKTNQMDTDuCqc6dKyCBYPKakk517nHc&sid=c08a9b9f&spx=%2F&type=grpc#494🇩🇪🔆💎³
 
 vless://telegram-id-ArV2ray@159.69.207.95:443?mode=gun&security=reality&encryption=none&pbk=_03uuyXxv5NMiTPP4O-ZzICKbw2piIiYFR0vJVk6Ql0&fp=firefox&type=grpc&serviceName=@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray&sni=greenpepper.ir&sid=14247737#💎90🇩🇪🔆✅💎¹
