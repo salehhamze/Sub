@@ -1,13 +1,9 @@
 ss://YWVzLTI1Ni1nY206QHZtZXNzcHY=@telegram.me:80#%40vmesspv+%D9%88%D9%82%D8%AA%DB%8C+%D9%82%D8%B7%D8%B9+%D8%B4%D8%AF%D8%8C+%D9%81%DB%8C%D9%84%D8%AA%D8%B1%D8%B4%DA%A9%D9%86+%D9%82%D8%B7%D8%B9+%D8%A8%D8%B4%D9%87+%D9%88+%D8%A2%D9%BE%D8%AF%DB%8C%D8%AA+%D9%88+%D8%AA%D8%B3%D8%AA+%D8%A8%DA%AF%DB%8C%D8%B1%DB%8C%D8%AF
-vless://d26c6e29-0efa-43d1-b3d1-89795c09da15@104.18.202.212:2096?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@AntiFilterChV2,@AntiFilterChV2,@AntiFilterChV2&sni=fl.ZoV2ray.cfd#✅¹💎🇩🇪⭐️18
-
-vless://2ce3f82f-609e-4646-c289-0e918df396ba@190.93.246.241:2053?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@AntiFilterChV2,@AntiFilterChV2,@AntiFilterChV2&sni=mt.AntiV2ray.site#✅²💎🇩🇪⭐️18
-
-vless://331c5f9f-540e-4c28-ddde-16ffc2bdf80c@173.245.58.100:2083?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@AntiFilterChV2,@AntiFilterChV2,@AntiFilterChV2&sni=mk.AntiV2ray.space#✅³💎🇩🇪⭐️18
-
-vless://572347a4-4e1c-47df-f258-c1d592e9fc1e@all.antiV2ray.sbs:2087?path=%2C%2C%3Fed%3D2048&security=tls&encryption=none&host=tm.AntiV2ray.space&type=ws&sni=tm.AntiV2ray.space#✅⁴💎🇩🇪⭐️18
-
-vless://470e861d-9be1-4057-bbdd-1c7278fe375f@all.antiV2ray.sbs:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=@AntiFilterChV2,@AntiFilterChV2,@AntiFilterChV2&sni=AntiV2ray.godratmand.link#✅⁵💎🇩🇪⭐️18
+vless://d26c6e29-0efa-43d1-b3d1-89795c09da15@104.18.202.212:2096?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&fp=chrome&type=grpc&serviceName=@AntiFilterChV2,@AntiFilterChV2,@AntiFilterChV2&sni=fl.ZoV2ray.cfd#%F0%9F%94%84%E2%9C%85%C2%B9%F0%9F%92%8E%F0%9F%87%A9%F0%9F%87%AA%E2%AD%90%EF%B8%8F18
+vless://2ce3f82f-609e-4646-c289-0e918df396ba@190.93.246.241:2053?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&fp=chrome&type=grpc&serviceName=@AntiFilterChV2,@AntiFilterChV2,@AntiFilterChV2&sni=mt.AntiV2ray.site#%F0%9F%94%84%E2%9C%85%C2%B2%F0%9F%92%8E%F0%9F%87%A9%F0%9F%87%AA%E2%AD%90%EF%B8%8F18
+vless://331c5f9f-540e-4c28-ddde-16ffc2bdf80c@173.245.58.100:2083?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&fp=chrome&type=grpc&serviceName=@AntiFilterChV2,@AntiFilterChV2,@AntiFilterChV2&sni=mk.AntiV2ray.space#%F0%9F%94%84%E2%9C%85%C2%B3%F0%9F%92%8E%F0%9F%87%A9%F0%9F%87%AA%E2%AD%90%EF%B8%8F18
+vless://572347a4-4e1c-47df-f258-c1d592e9fc1e@all.antiV2ray.sbs:2087?path=%40AntiFilterChV2%2C%40AntiFilterChV2%2C%40AntiFilterChV2%3Fed%3D2048&security=tls&encryption=none&alpn=h2,http/1.1&host=tm.AntiV2ray.space&fp=chrome&type=ws&sni=tm.AntiV2ray.space#%F0%9F%94%84%E2%9C%85%E2%81%B4%F0%9F%92%8E%F0%9F%87%A9%F0%9F%87%AA%E2%AD%90%EF%B8%8F18
+vless://470e861d-9be1-4057-bbdd-1c7278fe375f@all.antiV2ray.sbs:443?mode=gun&security=tls&encryption=none&alpn=h2,http/1.1&fp=chrome&type=grpc&serviceName=@AntiFilterChV2,@AntiFilterChV2,@AntiFilterChV2&sni=AntiV2ray.godratmand.link#%F0%9F%94%84%E2%9C%85%E2%81%B5%F0%9F%92%8E%F0%9F%87%A9%F0%9F%87%AA%E2%AD%90%EF%B8%8F18
 vless://99875be6-ee4e-4093-a289-7f848002d435@xio.vpnxw.eu.org:2095?path=%2F%3Fed%3D2048&security=none&encryption=none&host=eio.vpnxw.eu.org&type=ws#%F0%9F%87%AB%F0%9F%87%B7%F0%9F%92%8E%F0%9F%8C%9F%F0%9F%93%8C2
 vless://ec50aeb0-fa59-4141-b5c5-24b978838b05@xio.vpnxw.eu.org:2095?path=%2F%3Fed%3D2048&security=none&encryption=none&host=auio.vpnxw.eu.org&type=ws#%F0%9F%87%A6%F0%9F%87%B9%F0%9F%92%8E%F0%9F%8C%9F%F0%9F%93%8C2
 vless://8e6b3cdc-5714-4abd-9c9d-70fbf5f98ef5@xio.vpnxw.eu.org:2095?path=%2F%3Fed%3D2048&security=none&encryption=none&host=deio.vpnxw.eu.org&type=ws#%F0%9F%87%A9%F0%9F%87%AA%F0%9F%92%8E%F0%9F%8C%9F%F0%9F%93%8C2
@@ -105,5 +101,3 @@ vless://962a733d-2614-0b9b-7ffe-9ac92ffea8eb@tahaquran9.xyz:443?path=%2Fcurrent_
 vless://962a733d-2614-0b9b-7ffe-9ac92ffea8eb@suratquran18.xyz:443?path=%2Fcurrent_time&security=tls&encryption=none&type=ws#t.me%2Fvmesspv
 vless://962a733d-2614-0b9b-7ffe-9ac92ffea8eb@caliphquran.xyz:443?path=%2Fcurrent_time&security=tls&encryption=none&type=ws#t.me%2Fvmesspv
 vless://962a733d-2614-0b9b-7ffe-9ac92ffea8eb@homsquran1.xyz:443?path=%2Fcurrent_time&security=tls&encryption=none&type=ws#t.me%2Fvmesspv
-vless://962a733d-2614-0b9b-7ffe-9ac92ffea8eb@aliquran05.xyz:443?path=%2Fcurrent_time&security=tls&encryption=none&type=ws#t.me%2Fvmesspv
-vless://962a733d-2614-0b9b-7ffe-9ac92ffea8eb@wahyquran13.xyz:443?path=%2Fcurrent_time&security=tls&encryption=none&type=ws#t.me%2Fvmesspv
