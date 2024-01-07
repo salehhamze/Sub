@@ -5,6 +5,7 @@ vless://b1c2d519-f3b9-4707-82a5-98a0400f3974@info.mrzedmodeon.top:443?encryption
 ss://YWVzLTEyOC1nY206QFpFRE1PREVPTg==@65.21.183.216:45793#%F0%9F%87%AB%F0%9F%87%AE%F0%9F%92%8E%E2%9C%A8
 vless://445b8b31-8c85-44f4-b50e-e6608db3493b@104.18.203.99:8880?encryption=none&security=none&type=ws&host=www.zedmode.shop&path=%2F%40ZEDMODEON#%F0%9F%87%A9%F0%9F%87%AA%F0%9F%92%8E%E2%9C%A8
 vless://7f067a77-c1f6-4edb-a3d9-291b1ec24b0c@info.mrzedmodeon.top:2096?encryption=none&security=tls&sni=cdn.zedmodeon2.shop&alpn=h2%2Chttp%2F1.1&fp=chrome&type=grpc&serviceName=TELEGRAM%3A%40ZEDMODEON-TELEGRAM%3A%40ZEDMODEON-TELEGRAM%3A%40ZEDMODEON%2CTELEGRAM%3A%40ZEDMODEON&mode=gun#%F0%9F%92%8E%E2%9C%A8%F0%9F%87%AB%F0%9F%87%AE
+vless://2d12ac06-638a-464e-8f51-27564187e858@free.pandavpn.tech:8880?encryption=none&security=none&type=ws&host=worker-bitter-poetry-da82.89ecb4659a9fc3.workers.dev&path=Telegram%20channel%20%3A%20%40pandavpntc#🇫🇮💎²¹
 
 vless://b4eb9b65-a56e-4d37-9df9-407bef36bc39@de.melov2ray.shop:443?encryption=none&security=tls&sni=De.Melov2ray.Shop&alpn=h2%2Chttp%2F1.1&fp=chrome&type=ws&path=%2Fmelov2ray#%20%F0%9F%8C%9F%F0%9F%92%8E1%F0%9F%87%A9%F0%9F%87%AA
 trojan://ffk6awd3VX@de.melov2ray.shop:2096?security=tls&sni=De.Melov2ray.Shop&alpn=h2%2Chttp%2F1.1&fp=chrome&type=ws&path=%2Fmelov2ray#%20%F0%9F%8C%9F%F0%9F%92%8E2%F0%9F%87%A9%F0%9F%87%AA
