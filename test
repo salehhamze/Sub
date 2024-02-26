@@ -1036,5 +1036,2456 @@
    }
   ]
  }
+},
+{
+ "dns": {
+  "hosts": {
+   "domain:googleapis.cn": "googleapis.com"
+  },
+  "servers": [
+   "1.1.1.1"
+  ]
+ },
+ "inbounds": [
+  {
+   "listen": "127.0.0.1",
+   "port": 10808,
+   "protocol": "socks",
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "userLevel": 8
+   },
+   "sniffing": {
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "enabled": true
+   },
+   "tag": "socks"
+  },
+  {
+   "listen": "127.0.0.1",
+   "port": 10809,
+   "protocol": "http",
+   "settings": {
+    "userLevel": 8
+   },
+   "tag": "http"
+  }
+ ],
+ "log": {
+  "loglevel": "warning"
+ },
+ "outbounds": [
+  {
+   "mux": {
+    "concurrency": -1,
+    "enabled": false,
+    "xudpConcurrency": 8,
+    "xudpProxyUDP443": ""
+   },
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "zula.ir",
+      "port": 2053,
+      "users": [
+       {
+        "encryption": "none",
+        "flow": "",
+        "id": "e86a2d93-27b9-4e91-acf0-ae239a66004f",
+        "level": 8,
+        "security": "auto"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "grpcSettings": {
+     "multiMode": false,
+     "serviceName": ""
+    },
+    "network": "grpc",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "fingerprint": "",
+     "publicKey": "",
+     "serverName": "kluhlihiuh.mic-irancel-raitel-mokhaberat-mahdi-good.store",
+     "shortId": "",
+     "show": false,
+     "spiderX": ""
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "tcpNoDelay": true
+    }
+   },
+   "tag": "proxy"
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "100-200",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpKeepAliveIdle": 100,
+     "tcpNoDelay": true
+    }
+   }
+  },
+  {
+   "protocol": "freedom",
+   "settings": {},
+   "tag": "direct"
+  },
+  {
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   },
+   "tag": "block"
+  }
+ ],
+ "routing": {
+  "domainStrategy": "IPIfNonMatch",
+  "rules": [
+   {
+    "ip": [
+     "1.1.1.1"
+    ],
+    "outboundTag": "proxy",
+    "port": "53",
+    "type": "field"
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "104.21.28.62",
+      "port": 443,
+      "users": [
+       {
+        "id": "dfb18c6f-731a-4898-a1c4-cc36c6055a90",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "serverName": "W2.sYlARSUn.eu.OrG",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "wsSettings": {
+     "path": "\/",
+     "headers": {
+      "Host": "W2.sYlARSUn.eu.OrG"
+     }
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255,
+     "tcpNoDelay": true
+    }
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "10-20",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpNoDelay": true,
+     "tcpKeepAliveIdle": 100
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+   {
+    "type": "field",
+    "inboundTag": [
+     "api"
+    ],
+    "outboundTag": "api",
+    "enabled": true
+   },
+   {
+    "id": "5627785659655799759",
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "104.21.28.62",
+      "port": 443,
+      "users": [
+       {
+        "id": "04a93bb8-0a5b-4aa8-ab7f-31fc7adab1c1",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "serverName": "eDGu.PurEboy.EU.ORG",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "wsSettings": {
+     "path": "\/",
+     "headers": {
+      "Host": "eDGu.PurEboy.EU.ORG"
+     }
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255,
+     "tcpNoDelay": true
+    }
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "10-20",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpNoDelay": true,
+     "tcpKeepAliveIdle": 100
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+   {
+    "type": "field",
+    "inboundTag": [
+     "api"
+    ],
+    "outboundTag": "api",
+    "enabled": true
+   },
+   {
+    "id": "5627785659655799759",
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "zula.ir",
+      "port": 443,
+      "users": [
+       {
+        "id": "b91b3053-9602-4a60-b848-ec0eafea0443",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "serverName": "u6Zghn5ZyTaRet4S838Q76kQgd9Mn61UflU53560XV8NMu68Gd7q25Y3Px.pAGes-Dev.Site",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "wsSettings": {
+     "path": "\/",
+     "headers": {
+      "Host": "u6Zghn5ZyTaRet4S838Q76kQgd9Mn61UflU53560XV8NMu68Gd7q25Y3Px.pAGes-Dev.Site"
+     }
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255,
+     "tcpNoDelay": true
+    }
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "10-20",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpNoDelay": true,
+     "tcpKeepAliveIdle": 100
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+   {
+    "type": "field",
+    "inboundTag": [
+     "api"
+    ],
+    "outboundTag": "api",
+    "enabled": true
+   },
+   {
+    "id": "5627785659655799759",
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "zula.ir",
+      "port": 2053,
+      "users": [
+       {
+        "id": "05bd2661-f47b-4e71-a934-1f9f83fb34f5",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "serverName": "DoWnLOadS.SeGARO.TECH",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "wsSettings": {
+     "path": "\/I4qaCnHhlKyYt2aTOdmZcpe",
+     "headers": {
+      "Host": "DoWnLOadS.SeGARO.TECH"
+     }
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255,
+     "tcpNoDelay": true
+    }
+   },
+   "mux": {
+    "enabled": true,
+    "concurrency": 8,
+    "xudpConcurrency": 8,
+    "xudpProxyUDP443": "reject"
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "10-20",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpNoDelay": true,
+     "tcpKeepAliveIdle": 100
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+   {
+    "type": "field",
+    "inboundTag": [
+     "api"
+    ],
+    "outboundTag": "api",
+    "enabled": true
+   },
+   {
+    "id": "5627785659655799759",
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "cpanel.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c5ccb435-2c9a-4e14-ca67-94ee9e854e82",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "serverName": "SkY.SuBmUb.sbs",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "wsSettings": {
+     "path": "\/Telegram:,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,@GozargahVPN,",
+     "headers": {
+      "Host": "SkY.SuBmUb.sbs"
+     }
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255,
+     "tcpNoDelay": true
+    }
+   },
+   "mux": {
+    "enabled": true,
+    "concurrency": 8,
+    "xudpConcurrency": 8,
+    "xudpProxyUDP443": "reject"
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "10-20",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpNoDelay": true,
+     "tcpKeepAliveIdle": 100
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+   {
+    "type": "field",
+    "inboundTag": [
+     "api"
+    ],
+    "outboundTag": "api",
+    "enabled": true
+   },
+   {
+    "id": "5627785659655799759",
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true
+   }
+  ]
+ }
+},
+{
+ "dns": {
+  "hosts": {
+   "domain:googleapis.cn": "googleapis.com"
+  },
+  "servers": [
+   "1.1.1.1"
+  ]
+ },
+ "inbounds": [
+  {
+   "listen": "127.0.0.1",
+   "port": 10808,
+   "protocol": "socks",
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "userLevel": 8
+   },
+   "sniffing": {
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "enabled": true
+   },
+   "tag": "socks"
+  },
+  {
+   "listen": "127.0.0.1",
+   "port": 10809,
+   "protocol": "http",
+   "settings": {
+    "userLevel": 8
+   },
+   "tag": "http"
+  }
+ ],
+ "log": {
+  "loglevel": "warning"
+ },
+ "outbounds": [
+  {
+   "mux": {
+    "concurrency": -1,
+    "enabled": false,
+    "xudpConcurrency": 8,
+    "xudpProxyUDP443": ""
+   },
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "zula.ir",
+      "port": 2053,
+      "users": [
+       {
+        "encryption": "none",
+        "flow": "",
+        "id": "ee390ecb-5f01-4c2d-bf41-9098813d37ab",
+        "level": 8,
+        "security": "auto"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "grpcSettings": {
+     "multiMode": false,
+     "serviceName": ""
+    },
+    "network": "grpc",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "fingerprint": "",
+     "publicKey": "",
+     "serverName": "iigigyihiihlhhgyg.mic-irancel-raitel-mokhaberat-mahdi-good.store",
+     "shortId": "",
+     "show": false,
+     "spiderX": ""
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "tcpNoDelay": true
+    }
+   },
+   "tag": "proxy"
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "100-200",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpKeepAliveIdle": 100,
+     "tcpNoDelay": true
+    }
+   }
+  },
+  {
+   "protocol": "freedom",
+   "settings": {},
+   "tag": "direct"
+  },
+  {
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   },
+   "tag": "block"
+  }
+ ],
+ "routing": {
+  "domainStrategy": "IPIfNonMatch",
+  "rules": [
+   {
+    "ip": [
+     "1.1.1.1"
+    ],
+    "outboundTag": "proxy",
+    "port": "53",
+    "type": "field"
+   }
+  ]
+ }
+},
+{
+ "dns": {
+  "hosts": {
+   "domain:googleapis.cn": "googleapis.com"
+  },
+  "servers": [
+   "1.1.1.1"
+  ]
+ },
+ "inbounds": [
+  {
+   "listen": "127.0.0.1",
+   "port": 10808,
+   "protocol": "socks",
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "userLevel": 8
+   },
+   "sniffing": {
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "enabled": true
+   },
+   "tag": "socks"
+  },
+  {
+   "listen": "127.0.0.1",
+   "port": 10809,
+   "protocol": "http",
+   "settings": {
+    "userLevel": 8
+   },
+   "tag": "http"
+  }
+ ],
+ "log": {
+  "loglevel": "warning"
+ },
+ "outbounds": [
+  {
+   "mux": {
+    "concurrency": 8,
+    "enabled": true,
+    "xudpConcurrency": 8,
+    "xudpProxyUDP443": "reject"
+   },
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "2a01:4f9:c010:e657::1",
+      "port": 1000,
+      "users": [
+       {
+        "encryption": "none",
+        "flow": "",
+        "id": "SeyyedMT4",
+        "level": 8,
+        "security": "auto"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "quic",
+    "quicSettings": {
+     "header": {
+      "type": "none"
+     },
+     "key": "Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT",
+     "security": "chacha20-poly1305"
+    },
+    "security": ""
+   },
+   "tag": "proxy"
+  },
+  {
+   "protocol": "freedom",
+   "settings": {},
+   "tag": "direct"
+  },
+  {
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   },
+   "tag": "block"
+  }
+ ],
+ "routing": {
+  "domainStrategy": "IPIfNonMatch",
+  "rules": [
+   {
+    "ip": [
+     "1.1.1.1"
+    ],
+    "outboundTag": "proxy",
+    "port": "53",
+    "type": "field"
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "loglevel": "Warn"
+ },
+ "dns": {
+  "servers": [
+   "1.1.1.1"
+  ],
+  "queryStrategy": "UseIP",
+  "tag": "built-in-DNS"
+ },
+ "inbounds": [
+  {
+   "listen": "127.0.0.1",
+   "port": 10808,
+   "protocol": "socks",
+   "tag": "socks_IN",
+   "settings": {
+    "udp": true
+   },
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls",
+     "quic"
+    ]
+   }
+  },
+  {
+   "listen": "127.0.0.1",
+   "port": 10809,
+   "protocol": "http",
+   "settings": {
+    "allowTransparent": true,
+    "timeout": 300
+   },
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ]
+   },
+   "tag": "http_IN"
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "190.93.244.0",
+      "port": 443,
+      "users": [
+       {
+        "id": "seyyedmt3",
+        "encryption": "none"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "minVersion": "1.3",
+     "fingerprint": "chrome",
+     "serverName": "gholam2.xn--6qqy9hlw3b.online"
+    },
+    "wsSettings": {
+     "headers": {
+      "Host": "gholam2.xn--6qqy9hlw3b.online"
+     },
+     "path": "\/Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT"
+    },
+    "sockopt": {
+     "tcpFastOpen": false,
+     "dialerProxy": "frag-out",
+     "tcpKeepAliveIdle": 120,
+     "tcpNoDelay": false
+    }
+   },
+   "mux": {
+    "enabled": true,
+    "concurrency": 2,
+    "xudpConcurrency": 2,
+    "xudpProxyUDP443": "reject"
+   }
+  },
+  {
+   "tag": "frag-out",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "UseIP",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "5-10",
+     "interval": "5-10"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "TcpNoDelay": true,
+     "tcpKeepAliveIdle": 120,
+     "domainStrategy": "UseIP"
+    }
+   }
+  },
+  {
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "UseIP"
+   },
+   "streamSettings": {},
+   "tag": "direct"
+  },
+  {
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "none"
+    }
+   },
+   "tag": "block"
+  },
+  {
+   "protocol": "dns",
+   "settings": {
+    "nonIPQuery": "drop"
+   },
+   "proxySettings": {
+    "tag": "proxy"
+   },
+   "tag": "dns-out"
+  }
+ ],
+ "routing": {
+  "domainMatcher": "hybrid",
+  "domainStrategy": "IPIfNonMatch",
+  "rules": [
+   {
+    "inboundTag": [
+     "socks_IN"
+    ],
+    "outboundTag": "dns-out",
+    "port": "53",
+    "type": "field"
+   },
+   {
+    "inboundTag": [
+     "built-in-DNS"
+    ],
+    "outboundTag": "proxy",
+    "type": "field"
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "loglevel": "Warn"
+ },
+ "dns": {
+  "servers": [
+   "1.1.1.1"
+  ],
+  "queryStrategy": "UseIP",
+  "tag": "built-in-DNS"
+ },
+ "inbounds": [
+  {
+   "listen": "127.0.0.1",
+   "port": 10808,
+   "protocol": "socks",
+   "tag": "socks_IN",
+   "settings": {
+    "udp": true
+   },
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls",
+     "quic"
+    ]
+   }
+  },
+  {
+   "listen": "127.0.0.1",
+   "port": 10809,
+   "protocol": "http",
+   "settings": {
+    "allowTransparent": true,
+    "timeout": 300
+   },
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ]
+   },
+   "tag": "http_IN"
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "190.93.244.0",
+      "port": 443,
+      "users": [
+       {
+        "id": "seyyedmt3",
+        "encryption": "none"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "minVersion": "1.3",
+     "fingerprint": "chrome",
+     "serverName": "gholam2.xn--6qqy9hlw3b.online"
+    },
+    "wsSettings": {
+     "headers": {
+      "Host": "gholam2.xn--6qqy9hlw3b.online"
+     },
+     "path": "\/Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT-Telegram:@SeyyedMT"
+    },
+    "sockopt": {
+     "tcpFastOpen": false,
+     "dialerProxy": "frag-out",
+     "tcpKeepAliveIdle": 120,
+     "tcpNoDelay": true
+    }
+   },
+   "mux": {
+    "enabled": false,
+    "concurrency": 2,
+    "xudpConcurrency": 2,
+    "xudpProxyUDP443": "reject"
+   }
+  },
+  {
+   "tag": "frag-out",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "UseIP",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "100-200",
+     "interval": "5-10"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "TcpNoDelay": true,
+     "tcpKeepAliveIdle": 120,
+     "domainStrategy": "UseIP"
+    }
+   }
+  },
+  {
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "UseIP"
+   },
+   "streamSettings": {},
+   "tag": "direct"
+  },
+  {
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "none"
+    }
+   },
+   "tag": "block"
+  },
+  {
+   "protocol": "dns",
+   "settings": {
+    "nonIPQuery": "drop"
+   },
+   "proxySettings": {
+    "tag": "proxy"
+   },
+   "tag": "dns-out"
+  }
+ ],
+ "routing": {
+  "domainMatcher": "hybrid",
+  "domainStrategy": "IPIfNonMatch",
+  "rules": [
+   {
+    "inboundTag": [
+     "socks_IN"
+    ],
+    "outboundTag": "dns-out",
+    "port": "53",
+    "type": "field"
+   },
+   {
+    "inboundTag": [
+     "built-in-DNS"
+    ],
+    "outboundTag": "proxy",
+    "type": "field"
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "172.67.191.234",
+      "port": 443,
+      "users": [
+       {
+        "id": "33f11af2-cf46-42e1-aad0-c7d85b5fe992",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "grpc",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "serverName": "cdn29.cdn2cdn.com",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "grpcSettings": {
+     "multiMode": false,
+     "serviceName": "e59ef42e"
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255,
+     "tcpNoDelay": true
+    }
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "10-20",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpNoDelay": true,
+     "tcpKeepAliveIdle": 100
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+   {
+    "type": "field",
+    "inboundTag": [
+     "api"
+    ],
+    "outboundTag": "api",
+    "enabled": true
+   },
+   {
+    "id": "5627785659655799759",
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "172.67.191.234",
+      "port": 443,
+      "users": [
+       {
+        "id": "ffe1402b-1c56-4e2e-d384-d5c81226e9cd",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "grpc",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "serverName": "arM.DibAneT.TecH",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "grpcSettings": {
+     "multiMode": false,
+     "serviceName": "fr33d0m"
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255,
+     "tcpNoDelay": true
+    }
+   },
+   "mux": {
+    "enabled": true,
+    "concurrency": 8,
+    "xudpConcurrency": 8,
+    "xudpProxyUDP443": "reject"
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "150-200",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpNoDelay": true,
+     "tcpKeepAliveIdle": 100
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+   {
+    "type": "field",
+    "inboundTag": [
+     "api"
+    ],
+    "outboundTag": "api",
+    "enabled": true
+   },
+   {
+    "id": "5627785659655799759",
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "www.visa.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "65f4397e-60cf-4151-94ad-57b544d43d08",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "grpc",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "serverName": "bIA.ZEDmODEON.lAt",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "grpcSettings": {
+     "multiMode": true,
+     "serviceName": "@zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON @zedmodeon - @ZEDMODEON"
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255,
+     "tcpNoDelay": true
+    }
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "10-20",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpNoDelay": true,
+     "tcpKeepAliveIdle": 100
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+   {
+    "type": "field",
+    "inboundTag": [
+     "api"
+    ],
+    "outboundTag": "api",
+    "enabled": true
+   },
+   {
+    "id": "5627785659655799759",
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "www.visa.com",
+      "port": 2083,
+      "users": [
+       {
+        "id": "3c110307-dcf0-4002-b944-6d2c9530dd23",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "grpc",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": false,
+     "serverName": "DAsH.ZEDmODEon.lAT",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "grpcSettings": {
+     "multiMode": false,
+     "serviceName": "ZEDMODEON-ZEDMODEON-ZEDMODEON"
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255,
+     "tcpNoDelay": true
+    }
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "tlshello",
+     "length": "10-20",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "tcpNoDelay": true,
+     "tcpKeepAliveIdle": 100
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+   {
+    "type": "field",
+    "inboundTag": [
+     "api"
+    ],
+    "outboundTag": "api",
+    "enabled": true
+   },
+   {
+    "id": "5627785659655799759",
+    "type": "field",
+    "port": "0-65535",
+    "outboundTag": "proxy",
+    "enabled": true
+   }
+  ]
+ }
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "172.67.73.38",
+      "port": 443,
+      "users": [
+       {
+        "id": "75a7a664-c179-43bc-8190-cb533e71befe",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": true,
+     "serverName": "CDN3.IRANBOOK.Shop",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "wsSettings": {
+     "path": "\/?ed=2048",
+     "headers": {
+      "Host": "CDN3.IRANBOOK.Shop"
+     }
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255
+    }
+   },
+   "mux": {
+    "enabled": false,
+    "concurrency": -1
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "fragment": {
+     "packets": "tlshello",
+     "length": "10-20",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "TcpNoDelay": true,
+     "tcpKeepAliveIdle": 100,
+     "mark": 255
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {}
+},
+
+]{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "172.67.73.38",
+      "port": 80,
+      "users": [
+       {
+        "id": "75a7a664-c179-43bc-8190-cb533e71befe",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "wsSettings": {
+     "path": "\/?ed=2048",
+     "headers": {
+      "Host": "CDN3.IRANBOOK.Shop"
+     }
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255
+    }
+   },
+   "mux": {
+    "enabled": false,
+    "concurrency": -1
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "fragment": {
+     "packets": "1-1",
+     "length": "3-5",
+     "interval": "5"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "TcpNoDelay": true,
+     "tcpKeepAliveIdle": 100,
+     "mark": 255
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {}
+},
+{
+ "log": {
+  "access": "",
+  "error": "",
+  "loglevel": "warning"
+ },
+ "inbounds": [
+  {
+   "tag": "socks",
+   "port": 10808,
+   "listen": "127.0.0.1",
+   "protocol": "socks",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  },
+  {
+   "tag": "http",
+   "port": 10809,
+   "listen": "127.0.0.1",
+   "protocol": "http",
+   "sniffing": {
+    "enabled": true,
+    "destOverride": [
+     "http",
+     "tls"
+    ],
+    "routeOnly": false
+   },
+   "settings": {
+    "auth": "noauth",
+    "udp": true,
+    "allowTransparent": false
+   }
+  }
+ ],
+ "outbounds": [
+  {
+   "tag": "proxy",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "172.67.73.38",
+      "port": 443,
+      "users": [
+       {
+        "id": "75a7a664-c179-43bc-8190-cb533e71befe",
+        "alterId": 0,
+        "email": "t@t.tt",
+        "security": "auto",
+        "encryption": "none",
+        "flow": ""
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "tlsSettings": {
+     "allowInsecure": true,
+     "serverName": "CDN3.IRANBOOK.Shop",
+     "alpn": [
+      "h2",
+      "http\/1.1"
+     ],
+     "fingerprint": "chrome",
+     "show": false
+    },
+    "wsSettings": {
+     "path": "\/?ed=2048",
+     "headers": {
+      "Host": "CDN3.IRANBOOK.Shop"
+     }
+    },
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "mark": 255
+    }
+   },
+   "mux": {
+    "enabled": false,
+    "concurrency": -1
+   }
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "fragment": {
+     "packets": "tlshello",
+     "length": "100-200",
+     "interval": "10-20"
+    }
+   },
+   "streamSettings": {
+    "sockopt": {
+     "TcpNoDelay": true,
+     "tcpKeepAliveIdle": 100,
+     "mark": 255
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {}
+  },
+  {
+   "tag": "block",
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   }
+  }
+ ],
+ "routing": {}
 }
 ]
