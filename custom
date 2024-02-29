@@ -3701,21 +3701,6 @@
    "statsOutboundUplink": true,
    "statsOutboundDownlink": true
   }
- },
- "routing": {
-  "domainStrategy": "IPIfNonMatch",
-  "rules": [
-   {
-    "ip": [
-     "1.1.1.1"
-    ],
-    "outboundTag": "proxy",
-    "port": "53",
-    "type": "field"
-   }
-  ]
- },
- "stats": {}
-}
+ } 
 
 ]
