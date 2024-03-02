@@ -3314,11 +3314,11 @@
    "settings": {
     "vnext": [
      {
-      "address": "www.speedtest.net",
+      "address": "discord.com",
       "port": 8443,
       "users": [
        {
-        "id": "000cb829-dc18-47ed-842a-3a809da317cc",
+        "id": "0a4770a5-8276-4036-b6fa-5dde95ecf0b2",
         "alterId": 0,
         "email": "t@t.tt",
         "security": "auto",
