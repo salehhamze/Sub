@@ -1,5 +1,5 @@
 {
-  "remarks": "vmesspv ",
+  "remarks": "vmesspv",
   "log": {
     "access": "",
     "error": "",
@@ -56,7 +56,7 @@
             "port": 8443,
             "users": [
               {
-                "id": "253e78fc-d3eb-454c-89e5-3268f76c6276",
+                "id": "8155d2bb-0eb4-40ff-ba1d-95df410a672a",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -72,7 +72,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "01.Ev02-02-q2Wx8Ryz0ViC3Bfmd1SnG7pjJn6LqK4p.TeCh",
+          "serverName": "01.EV02-02-Q2WX8Ryz0Vic3BFMD1SnG7pJJN6lQk4p.Tech",
           "alpn": [
             "h2",
             "http/1.1"
