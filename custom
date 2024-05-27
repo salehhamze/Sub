@@ -351,7 +351,7 @@
             "port": 8443,
             "users": [
               {
-                "id": "8155d2bb-0eb4-40ff-ba1d-95df410a672a",
+                "id": "962c4650-ca89-4af8-9e3b-c3f9510ba07a",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -367,7 +367,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "01.ev02-02-Q2wX8RyZ0ViC3BfmD1SnG7PJJn6lqK4P.tEch",
+          "serverName": "01.ev02-02-q2wx8ryz0vic3bfmd1sng7pjjn6lqk4p.tech",
           "alpn": [
             "h2",
             "http/1.1"
