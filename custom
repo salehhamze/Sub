@@ -347,7 +347,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.67.191.234",
+            "address": "www.speedtest.net",
             "port": 8443,
             "users": [
               {
@@ -494,11 +494,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.67.191.234",
+            "address": "www.speedtest.net",
             "port": 8443,
             "users": [
               {
-                "id": "8155d2bb-0eb4-40ff-ba1d-95df410a672a",
+                "id": "253e78fc-d3eb-454c-89e5-3268f76c6276",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -514,7 +514,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "04.Ev02-02-Q2wX8RYz0Vic3bFmD1sng7pjjn6lqk4p.Tech",
+          "serverName": "04.ev02-02-q2wx8ryz0vic3bfmd1sng7pjjn6lqk4p.tech",
           "alpn": [
             "h2",
             "http/1.1"
