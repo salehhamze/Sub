@@ -82,7 +82,7 @@
         },
         "grpcSettings": {
           "multiMode": false,
-          "serviceName": "@@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPNay_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"
+          "serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"
         },
         "sockopt": {
           "dialerProxy": "fragment",
