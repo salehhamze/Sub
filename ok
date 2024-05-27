@@ -52,11 +52,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.67.191.234",
+            "address": "www.speedtest.net",
             "port": 8443,
             "users": [
               {
-                "id": "8155d2bb-0eb4-40ff-ba1d-95df410a672a",
+                "id": "962c4650-ca89-4af8-9e3b-c3f9510ba07a",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -72,7 +72,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "01.EV02-02-Q2WX8Ryz0Vic3BFMD1SnG7pJJN6lQk4p.Tech",
+          "serverName": "01.ev02-02-q2wx8ryz0vic3bfmd1sng7pjjn6lqk4p.tech",
           "alpn": [
             "h2",
             "http/1.1"
@@ -82,7 +82,7 @@
         },
         "grpcSettings": {
           "multiMode": false,
-          "serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"
+          "serviceName": "@@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPNay_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"
         },
         "sockopt": {
           "dialerProxy": "fragment",
