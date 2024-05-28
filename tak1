@@ -1,0 +1,1848 @@
+{
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "discord.com",
+            "port": 2083,
+            "users": [
+              {
+                "id": "oxidvip.tech",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "oxiDvip.teCH",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "randomized",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/oxidvip?ed=2048",
+          "headers": {
+            "Host": "oxiDvip.teCH"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255
+        }
+      },
+      "mux": {
+        "enabled": false,
+        "concurrency": -1
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "10-20",
+          "interval": "10-20"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "TcpNoDelay": true,
+          "tcpKeepAliveIdle": 100,
+          "mark": 255
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5465425548310166497",
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": [
+          "domain:ir",
+          "geosite:cn"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "5425034033205580637",
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": [
+          "geoip:private",
+          "geoip:cn",
+          "geoip:ir"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
+  }
+}
+
+
+{
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "1.1.1.1",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "zula.ir",
+          "ashburn.omega-dic.workers.dev",
+          "ashburn.digital-res-dic.workers.dev",
+          "nuremberg.raspberryip.com",
+          "helsinki.galaxy-vpn-2023.workers.dev",
+          "fr.raspberryip.com",
+          "de.raspberryip.com",
+          "nuremberg.digital-res-dic.workers.dev",
+          "helsinki.digital-res-dic.workers.dev",
+          "helsinki.xboy-galaxy.workers.dev",
+          "ashburn.fzahiri056.workers.dev",
+          "ashburn.raspberryip.com",
+          "nuremberg.quickping7.workers.dev",
+          "nuremberg.galaxy-res-dic.workers.dev",
+          "nl.raspberryip.com",
+          "helsinki.raspberryip.com"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "server": "dns-direct"
+      },
+      {
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "188.114.97.3",
+        "188.114.96.3",
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3",
+        "104.18.202.232",
+        "104.18.203.232",
+        "188.114.96.0",
+        "188.114.97.0",
+        "2a06:98c1:3120::",
+        "2a06:98c1:3121::"
+      ]
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 6450,
+      "override_address": "1.1.1.1",
+      "override_port": 53
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇬🇧 Powerd-By-@s0013 GRPC CDN § 57",
+        "🇬🇧 Powerd-By-@s0013 TLS H2 GRPC CDN § 58",
+        "🇬🇧 Powerd-By-@s0013 TLS H2 GRPC CDN § 59",
+        "🇬🇧 Powerd-By-@s0013 WS CDN § 60",
+        "🇫🇷 telegram@s0013 TLS HTTPUPGRADE § 67",
+        "🇫🇷 telegram@s0013 GRPC CDN § 68",
+        "🇫🇷 telegram@s0013 TLS H2 GRPC CDN § 69",
+        "🇫🇷 telegram@s0013 TLS H2 GRPC CDN § 70",
+        "🇫🇷 telegram@s0013 WS CDN § 71",
+        "🇩🇪 tel@s0013 WS CDN § 61",
+        "🇩🇪 tel@s0013 GRPC CDN § 62",
+        "🇩🇪 tel@s0013 TCP HTTP § 63",
+        "🇳🇱 siamak-tel-s0013 WS CDN § 64",
+        "🇳🇱 siamak-tel-s0013 GRPC CDN § 65",
+        "🇳🇱 siamak-tel-s0013 TCP HTTP § 66",
+        "🇺🇸 @s0013 WS CDN § 0",
+        "🇺🇸 @s0013 WS CDN § 10",
+        "🇺🇸 @s0013 WS CDN § 1",
+        "🇺🇸 telegram-@s0013 TLS WS VLESS § 3",
+        "🇺🇸 telegram-@s0013 TLS WS TROJAN § 4",
+        "🇺🇸 telegram-@s0013 TCP HTTP § 5",
+        "🇺🇸 telegram-@s0013 SSH § 6",
+        "🇺🇸 telegram-@s0013 TUIC § 7",
+        "🇺🇸 telegram-@s0013 HYSTERIA § 8",
+        "🇩🇪 @s0013-telegramWS CDN § 13",
+        "🇩🇪 @s0013-telegramWS CDN § 24",
+        "🇩🇪 @s0013-telegramWS CDN § 22",
+        "🇩🇪 imsia-tel:s0013 TLS WS VLESS § 16",
+        "🇩🇪 imsia-tel:s0013 TLS WS TROJAN § 17",
+        "🇩🇪 imsia-tel:s0013 TCP HTTP § 18",
+        "🇩🇪 imsia-tel:s0013 SSH § 19",
+        "🇩🇪 imsia-tel:s0013 TUIC § 20",
+        "🇩🇪 imsia-tel:s0013 HYSTERIA § 21",
+        "🇫🇮 Powerd-By-s0013=WS CDN § 35",
+        "🇫🇮 Powerd-By-s0013=WS CDN § 36",
+        "🇫🇮 Powerd-By-s0013=WS CDN § 37",
+        "🇫🇮 Powerd-By-s0013 TLS WS VLESS § 29",
+        "🇫🇮 Powerd-By-s0013 TLS WS TROJAN § 30",
+        "🇫🇮 Powerd-By-s0013 TCP HTTP § 31",
+        "🇫🇮 Powerd-By-s0013 SSH § 32",
+        "🇫🇮 Powerd-By-s0013 TUIC § 33",
+        "🇫🇮 Powerd-By-s0013 HYSTERIA § 34",
+        "🇩🇪 imsia-tel:s0013 GRPC CDN § 39",
+        "🇩🇪 imsia-tel:s0013 WS CDN § 40",
+        "🇫🇮 Powerd-By-s0013 GRPC CDN § 41",
+        "🇫🇮 Powerd-By-s0013 WS CDN § 42",
+        "🇺🇸 telegram-@s0013 GRPC CDN § 43",
+        "🇺🇸 telegram-@s0013 WS CDN § 44",
+        "🇩🇪 imsia-tel:s0013 TLS HTTPUPGRADE § 45",
+        "🇩🇪 imsia-tel:s0013 TLS GRPC § 46",
+        "🇩🇪 imsia-tel:s0013 SHADOW TLS § 47",
+        "🇩🇪 imsia-tel:s0013 TLS H2 SHADOW § 48",
+        "🇫🇮 Powerd-By-s0013 TLS HTTPUPGRADE § 49",
+        "🇫🇮 Powerd-By-s0013 TLS GRPC § 50",
+        "🇫🇮 Powerd-By-s0013 SHADOW TLS § 51",
+        "🇫🇮 Powerd-By-s0013 TLS H2 SHADOW § 52",
+        "🇺🇸 telegram-@s0013 TLS HTTPUPGRADE § 53",
+        "🇺🇸 telegram-@s0013 TLS GRPC § 54",
+        "🇺🇸 telegram-@s0013 SHADOW TLS § 55",
+        "🇺🇸 telegram-@s0013 TLS H2 SHADOW § 56"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇬🇧 Powerd-By-@s0013 GRPC CDN § 57",
+        "🇬🇧 Powerd-By-@s0013 TLS H2 GRPC CDN § 58",
+        "🇬🇧 Powerd-By-@s0013 TLS H2 GRPC CDN § 59",
+        "🇬🇧 Powerd-By-@s0013 WS CDN § 60",
+        "🇫🇷 telegram@s0013 TLS HTTPUPGRADE § 67",
+        "🇫🇷 telegram@s0013 GRPC CDN § 68",
+        "🇫🇷 telegram@s0013 TLS H2 GRPC CDN § 69",
+        "🇫🇷 telegram@s0013 TLS H2 GRPC CDN § 70",
+        "🇫🇷 telegram@s0013 WS CDN § 71",
+        "🇩🇪 tel@s0013 WS CDN § 61",
+        "🇩🇪 tel@s0013 GRPC CDN § 62",
+        "🇩🇪 tel@s0013 TCP HTTP § 63",
+        "🇳🇱 siamak-tel-s0013 WS CDN § 64",
+        "🇳🇱 siamak-tel-s0013 GRPC CDN § 65",
+        "🇳🇱 siamak-tel-s0013 TCP HTTP § 66",
+        "🇺🇸 @s0013 WS CDN § 0",
+        "🇺🇸 @s0013 WS CDN § 10",
+        "🇺🇸 @s0013 WS CDN § 1",
+        "🇺🇸 telegram-@s0013 TLS WS VLESS § 3",
+        "🇺🇸 telegram-@s0013 TLS WS TROJAN § 4",
+        "🇺🇸 telegram-@s0013 TCP HTTP § 5",
+        "🇺🇸 telegram-@s0013 SSH § 6",
+        "🇺🇸 telegram-@s0013 TUIC § 7",
+        "🇺🇸 telegram-@s0013 HYSTERIA § 8",
+        "🇩🇪 @s0013-telegramWS CDN § 13",
+        "🇩🇪 @s0013-telegramWS CDN § 24",
+        "🇩🇪 @s0013-telegramWS CDN § 22",
+        "🇩🇪 imsia-tel:s0013 TLS WS VLESS § 16",
+        "🇩🇪 imsia-tel:s0013 TLS WS TROJAN § 17",
+        "🇩🇪 imsia-tel:s0013 TCP HTTP § 18",
+        "🇩🇪 imsia-tel:s0013 SSH § 19",
+        "🇩🇪 imsia-tel:s0013 TUIC § 20",
+        "🇩🇪 imsia-tel:s0013 HYSTERIA § 21",
+        "🇫🇮 Powerd-By-s0013=WS CDN § 35",
+        "🇫🇮 Powerd-By-s0013=WS CDN § 36",
+        "🇫🇮 Powerd-By-s0013=WS CDN § 37",
+        "🇫🇮 Powerd-By-s0013 TLS WS VLESS § 29",
+        "🇫🇮 Powerd-By-s0013 TLS WS TROJAN § 30",
+        "🇫🇮 Powerd-By-s0013 TCP HTTP § 31",
+        "🇫🇮 Powerd-By-s0013 SSH § 32",
+        "🇫🇮 Powerd-By-s0013 TUIC § 33",
+        "🇫🇮 Powerd-By-s0013 HYSTERIA § 34",
+        "🇩🇪 imsia-tel:s0013 GRPC CDN § 39",
+        "🇩🇪 imsia-tel:s0013 WS CDN § 40",
+        "🇫🇮 Powerd-By-s0013 GRPC CDN § 41",
+        "🇫🇮 Powerd-By-s0013 WS CDN § 42",
+        "🇺🇸 telegram-@s0013 GRPC CDN § 43",
+        "🇺🇸 telegram-@s0013 WS CDN § 44",
+        "🇩🇪 imsia-tel:s0013 TLS HTTPUPGRADE § 45",
+        "🇩🇪 imsia-tel:s0013 TLS GRPC § 46",
+        "🇩🇪 imsia-tel:s0013 SHADOW TLS § 47",
+        "🇩🇪 imsia-tel:s0013 TLS H2 SHADOW § 48",
+        "🇫🇮 Powerd-By-s0013 TLS HTTPUPGRADE § 49",
+        "🇫🇮 Powerd-By-s0013 TLS GRPC § 50",
+        "🇫🇮 Powerd-By-s0013 SHADOW TLS § 51",
+        "🇫🇮 Powerd-By-s0013 TLS H2 SHADOW § 52",
+        "🇺🇸 telegram-@s0013 TLS HTTPUPGRADE § 53",
+        "🇺🇸 telegram-@s0013 TLS GRPC § 54",
+        "🇺🇸 telegram-@s0013 SHADOW TLS § 55",
+        "🇺🇸 telegram-@s0013 TLS H2 SHADOW § 56"
+      ],
+      "url": "http://cp.cloudflare.com/",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 Powerd-By-@s0013 GRPC CDN § 57",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "427907d8-d27d-4087-ac09-b146ca8561f3",
+      "tls": {
+        "enabled": true,
+        "server_name": "ENglAnD.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "8oSchPPdBPR2qi7B13CTRdpow",
+        "idle_timeout": "1m55s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇬🇧 Powerd-By-@s0013 TLS H2 GRPC CDN § 58",
+      "server": "zula.ir",
+      "server_port": 443,
+      "password": "427907d8-d27d-4087-ac09-b146ca8561f3",
+      "tls": {
+        "enabled": true,
+        "server_name": "englAND.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "aitb0Mq1cQ2qi7B13CTRdpow",
+        "idle_timeout": "1m55s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇬🇧 Powerd-By-@s0013 TLS H2 GRPC CDN § 59",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "427907d8-d27d-4087-ac09-b146ca8561f3",
+      "security": "chacha20-poly1305",
+      "tls": {
+        "enabled": true,
+        "server_name": "ENgLANd.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "grpc",
+        "service_name": "nJy4yLuV9T2qi7B13CTRdpow",
+        "idle_timeout": "1m55s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 Powerd-By-@s0013 WS CDN § 60",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "427907d8-d27d-4087-ac09-b146ca8561f3",
+      "tls": {
+        "enabled": true,
+        "server_name": "ENglANd.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/8oSchPPdBPRvNL5Z7e",
+        "headers": {
+          "Host": "england.xn--o39ap1aq6zfxb14v.shop"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 telegram@s0013 TLS HTTPUPGRADE § 67",
+      "server": "fr.raspberryip.com",
+      "server_port": 443,
+      "uuid": "63b5806b-1722-4a66-b779-3fe25ead1e7c",
+      "tls": {
+        "enabled": true,
+        "server_name": "fr.raspberryip.com",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/CBP24lLEfmEmMHsPtwC",
+        "headers": {
+          "Host": "fr.raspberryip.com"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 telegram@s0013 GRPC CDN § 68",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "63b5806b-1722-4a66-b779-3fe25ead1e7c",
+      "tls": {
+        "enabled": true,
+        "server_name": "fRanCe.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "CBP24lLEfmd5YWWr6hX",
+        "idle_timeout": "1m55s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇫🇷 telegram@s0013 TLS H2 GRPC CDN § 69",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "63b5806b-1722-4a66-b779-3fe25ead1e7c",
+      "security": "chacha20-poly1305",
+      "tls": {
+        "enabled": true,
+        "server_name": "fRaNce.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "grpc",
+        "service_name": "D3S4ybLRWtfdXd5YWWr6hX",
+        "idle_timeout": "1m55s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇫🇷 telegram@s0013 TLS H2 GRPC CDN § 70",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "63b5806b-1722-4a66-b779-3fe25ead1e7c",
+      "security": "chacha20-poly1305",
+      "tls": {
+        "enabled": true,
+        "server_name": "frAncE.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "grpc",
+        "service_name": "D3S4ybLRWtfdXd5YWWr6hX",
+        "idle_timeout": "1m55s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 telegram@s0013 WS CDN § 71",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "63b5806b-1722-4a66-b779-3fe25ead1e7c",
+      "tls": {
+        "enabled": true,
+        "server_name": "fRanCe.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/CBP24lLEfmvF8snC9U6w19bru",
+        "headers": {
+          "Host": "france.xn--o39ap1aq6zfxb14v.shop"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 tel@s0013 WS CDN § 61",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "663adf6d-a2e8-49a3-f562-67857a83ec0c",
+      "tls": {
+        "enabled": true,
+        "server_name": "De.alpHA-vPn.SIte",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/13467",
+        "headers": {
+          "Host": "dealpha-vpn.site"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 tel@s0013 GRPC CDN § 62",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "2763c820-432d-4c9c-d7da-c935bf56ba07",
+      "tls": {
+        "enabled": true,
+        "server_name": "dE-grPc.alpHA-vPn.SIte",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "18153",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 tel@s0013 TCP HTTP § 63",
+      "server": "de.raspberryip.com",
+      "server_port": 14102,
+      "uuid": "a128c43b-405f-44a4-f0cd-fb5df494c76f",
+      "tls": {
+        "enabled": true,
+        "server_name": "de.raspberryip.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "http",
+        "path": "/"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 siamak-tel-s0013 WS CDN § 64",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "89083966-8473-4823-a309-4f9e3e58cf70",
+      "tls": {
+        "enabled": true,
+        "server_name": "nL.alpHA-vPn.SIte",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/10787",
+        "headers": {
+          "Host": "nl.alpha-vpn.site"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 siamak-tel-s0013 GRPC CDN § 65",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "608c6107-6c18-4de0-cad8-98ab8033abc2",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl-gRpC.alpHA-vPn.SIte",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "13018",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 siamak-tel-s0013 TCP HTTP § 66",
+      "server": "nl.raspberryip.com",
+      "server_port": 19565,
+      "uuid": "e6735470-e9a4-4ecc-dc96-513d1b93dd24",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl.raspberryip.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "http",
+        "path": "/"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 @s0013 WS CDN § 0",
+      "server": "AshbUrN.omEga-diC.worKers.deV",
+      "server_port": 443,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "tls": {
+        "enabled": true,
+        "server_name": "asHburN.omega-dIc.workErs.dev",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/bs55Ovr86OzuubiHi",
+        "headers": {
+          "Host": "ashburn.omega-dic.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 @s0013 WS CDN § 10",
+      "server": "ASHbURn.dIgITal-ReS-DIc.WoRkERS.dEV",
+      "server_port": 443,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "tls": {
+        "enabled": true,
+        "server_name": "asHburn.diGITaL-REs-dIc.WoRkErs.dEV",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/bs55Ovr86OzuubiHi",
+        "headers": {
+          "Host": "ashburn.digital-res-dic.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 @s0013 WS CDN § 1",
+      "server": "aShbuRn.fzaHirI056.WorkeRs.Dev",
+      "server_port": 443,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "tls": {
+        "enabled": true,
+        "server_name": "AShbuRn.fZaHirI056.WorkeRs.DeV",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/bs55Ovr86OzuubiHi",
+        "headers": {
+          "Host": "ashburn.fzahiri056.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 telegram-@s0013 TLS WS VLESS § 3",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 443,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "tls": {
+        "enabled": true,
+        "server_name": "ashburn.raspberryip.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/bs55Ovr86OzuubiHi",
+        "headers": {
+          "Host": "ashburn.raspberryip.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 telegram-@s0013 TLS WS TROJAN § 4",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 443,
+      "password": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "tls": {
+        "enabled": true,
+        "server_name": "ashburn.raspberryip.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/B4unUeNRzuubiHi",
+        "headers": {
+          "Host": "ashburn.raspberryip.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 telegram-@s0013 TCP HTTP § 5",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 80,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "security": "chacha20-poly1305",
+      "authenticated_length": true,
+      "transport": {
+        "type": "http",
+        "host": "ashburn.raspberryip.com",
+        "path": "/r1qRz365EjjsSsuustGynSOrVZ",
+        "method": "GET"
+      }
+    },
+    {
+      "type": "ssh",
+      "tag": "🇺🇸 telegram-@s0013 SSH § 6",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 26082,
+      "user": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "private_key": "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUx\nOQAAACDpFLt7aWUKMc3Qb9cEf0oozRazfOLngE5ZNiTTDebWmAAAAIhisJNbYrCTWwAAAAtzc2gt\nZWQyNTUxOQAAACDpFLt7aWUKMc3Qb9cEf0oozRazfOLngE5ZNiTTDebWmAAAAEB4d7QnJpnn6uNg\nmI5hXI1Mdq2b7YrncG0mnlST4hMAgOkUu3tpZQoxzdBv1wR/SijNFrN84ueATlk2JNMN5taYAAAA\nAAECAwQF\n-----END OPENSSH PRIVATE KEY-----\n",
+      "host_key": [
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFqUHQF1k5Ki7CtNPQmq1U9Wt9Ki9VmYanmVNiWbCIpE0g+ADnhnP+rH8JV5rNftwX7FkKuNMRmdC5IVewPXIi4=",
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO00Ed7zweFy/7ZMFiFAfK/JbfSC+0D+f2/RHSKcfmAN"
+      ]
+    },
+    {
+      "type": "tuic",
+      "tag": "🇺🇸 telegram-@s0013 TUIC § 7",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 22028,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "password": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "congestion_control": "cubic",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "ashburn.raspberryip.com",
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 telegram-@s0013 HYSTERIA § 8",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 33217,
+      "obfs": {
+        "type": "salamander",
+        "password": "dazc7dXmap7jh9"
+      },
+      "password": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "tls": {
+        "enabled": true,
+        "server_name": "ashburn.raspberryip.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @s0013-telegramWS CDN § 13",
+      "server": "NurEmbeRG.qUickPIng7.WoRkErS.dEv",
+      "server_port": 443,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "NurEmbeRg.qUickPIng7.woRkerS.dEv",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fhhoF0UtMaiAjYHiL4E",
+        "headers": {
+          "Host": "nuremberg.quickping7.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @s0013-telegramWS CDN § 24",
+      "server": "nuRemBErg.digiTAl-reS-dIc.workERs.Dev",
+      "server_port": 443,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "nuRemBERG.digiTAl-reS-dIc.WOrkERs.Dev",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fhhoF0UtMaiAjYHiL4E",
+        "headers": {
+          "Host": "nuremberg.digital-res-dic.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @s0013-telegramWS CDN § 22",
+      "server": "NurEmbeRg.GalaXY-rEs-dic.wOrkers.DeV",
+      "server_port": 443,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "NurEmbeRg.GalaXY-REs-dic.wOrkerS.DeV",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fhhoF0UtMaiAjYHiL4E",
+        "headers": {
+          "Host": "nuremberg.galaxy-res-dic.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 imsia-tel:s0013 TLS WS VLESS § 16",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 443,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "nuremberg.raspberryip.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fhhoF0UtMaiAjYHiL4E",
+        "headers": {
+          "Host": "nuremberg.raspberryip.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 imsia-tel:s0013 TLS WS TROJAN § 17",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 443,
+      "password": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "nuremberg.raspberryip.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/LPDkvewGyYo2ymtMaiAjYHiL4E",
+        "headers": {
+          "Host": "nuremberg.raspberryip.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇩🇪 imsia-tel:s0013 TCP HTTP § 18",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 80,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "security": "chacha20-poly1305",
+      "authenticated_length": true,
+      "transport": {
+        "type": "http",
+        "host": "nuremberg.raspberryip.com",
+        "path": "/A2tCXDJTptndyy0",
+        "method": "GET"
+      }
+    },
+    {
+      "type": "ssh",
+      "tag": "🇩🇪 imsia-tel:s0013 SSH § 19",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 21705,
+      "user": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "private_key": "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUx\nOQAAACAmbyol9UsBXwEiYYg06zBPOHBm/6EbVMtLZzGnKR1bEAAAAIhSHzP9Uh8z/QAAAAtzc2gt\nZWQyNTUxOQAAACAmbyol9UsBXwEiYYg06zBPOHBm/6EbVMtLZzGnKR1bEAAAAEDso5y1L9O1uJgM\njsKDYLS7uLJUENYCEumQmu2i0buoWiZvKiX1SwFfASJhiDTrME84cGb/oRtUy0tnMacpHVsQAAAA\nAAECAwQF\n-----END OPENSSH PRIVATE KEY-----\n",
+      "host_key": [
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOTG6jWk3UpO4uJMGqcwRr4g6v87ezW+Kvw9lZVN0u4lSEqn+cCesc/5EDn70EGOakOodd14NOf+sMbphL9YNw4=",
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB75ucX/JKrOZm0r/e5BF6dQe0X3S0UkZpuNzz5aVk/N"
+      ]
+    },
+    {
+      "type": "tuic",
+      "tag": "🇩🇪 imsia-tel:s0013 TUIC § 20",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 53247,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "password": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "congestion_control": "cubic",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "nuremberg.raspberryip.com",
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇩🇪 imsia-tel:s0013 HYSTERIA § 21",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 55486,
+      "obfs": {
+        "type": "salamander",
+        "password": "wHhtGSHefOMY7Vjz0tfmn5gRTNwz"
+      },
+      "password": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "nuremberg.raspberryip.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 Powerd-By-s0013=WS CDN § 35",
+      "server": "hElsiNki.gAlaxy-vPN-2023.workErs.deV",
+      "server_port": 443,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "tls": {
+        "enabled": true,
+        "server_name": "hElsiNki.GalaxY-vPN-2023.workErs.DeV",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/yY1jeQeicCTCqP5Kpx4Go",
+        "headers": {
+          "Host": "helsinki.galaxy-vpn-2023.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 Powerd-By-s0013=WS CDN § 36",
+      "server": "helSInkI.diGital-rEs-diC.wOrkers.Dev",
+      "server_port": 443,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "tls": {
+        "enabled": true,
+        "server_name": "helSINkI.digital-rES-diC.wOrkers.DeV",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/yY1jeQeicCTCqP5Kpx4Go",
+        "headers": {
+          "Host": "helsinki.digital-res-dic.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 Powerd-By-s0013=WS CDN § 37",
+      "server": "heLsinKi.xBOy-galaxy.worKers.Dev",
+      "server_port": 443,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "tls": {
+        "enabled": true,
+        "server_name": "heLsInKi.xBOy-galaxy.WorKers.Dev",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/yY1jeQeicCTCqP5Kpx4Go",
+        "headers": {
+          "Host": "helsinki.xboy-galaxy.workers.dev"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 Powerd-By-s0013 TLS WS VLESS § 29",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 443,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "tls": {
+        "enabled": true,
+        "server_name": "helsinki.raspberryip.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/yY1jeQeicCTCqP5Kpx4Go",
+        "headers": {
+          "Host": "helsinki.raspberryip.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇫🇮 Powerd-By-s0013 TLS WS TROJAN § 30",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 443,
+      "password": "62b912c9-3629-494b-8206-09b89f102385",
+      "tls": {
+        "enabled": true,
+        "server_name": "helsinki.raspberryip.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/GypDIUngcCTCqP5Kpx4Go",
+        "headers": {
+          "Host": "helsinki.raspberryip.com"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇫🇮 Powerd-By-s0013 TCP HTTP § 31",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 80,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "security": "chacha20-poly1305",
+      "authenticated_length": true,
+      "transport": {
+        "type": "http",
+        "host": "helsinki.raspberryip.com",
+        "path": "/d8Mg0XtTEG6wjFoL13djrawI",
+        "method": "GET"
+      }
+    },
+    {
+      "type": "ssh",
+      "tag": "🇫🇮 Powerd-By-s0013 SSH § 32",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 7092,
+      "user": "62b912c9-3629-494b-8206-09b89f102385",
+      "private_key": "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUx\nOQAAACDT7PfDsgRhq7giXxrCfl5DcaiheJ4hcsFvaN+N4TXhfQAAAIiLE8DzixPA8wAAAAtzc2gt\nZWQyNTUxOQAAACDT7PfDsgRhq7giXxrCfl5DcaiheJ4hcsFvaN+N4TXhfQAAAEBUOWir1mfhdVRv\nSgCsr8nlQD4JbUy88+wZ2MHXmdtLPNPs98OyBGGruCJfGsJ+XkNxqKF4niFywW9o343hNeF9AAAA\nAAECAwQF\n-----END OPENSSH PRIVATE KEY-----\n",
+      "host_key": [
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJSDxXwVbH+sEnocd3YAQUQ22eKpEVu/Vkazstqn+4eAJb67BqtIJjZo/pi2tx/nFdFWzwlP4oJqY4lLwkU1FRw=",
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM6Xf9ZisCZD94Fju7IBMxIZ50WLKg+eJ3CQfg8G08gX"
+      ]
+    },
+    {
+      "type": "tuic",
+      "tag": "🇫🇮 Powerd-By-s0013 TUIC § 33",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 55127,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "password": "62b912c9-3629-494b-8206-09b89f102385",
+      "congestion_control": "cubic",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "helsinki.raspberryip.com",
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇫🇮 Powerd-By-s0013 HYSTERIA § 34",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 11818,
+      "obfs": {
+        "type": "salamander",
+        "password": "UR39sDPDeexERzh"
+      },
+      "password": "62b912c9-3629-494b-8206-09b89f102385",
+      "tls": {
+        "enabled": true,
+        "server_name": "helsinki.raspberryip.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 imsia-tel:s0013 GRPC CDN § 39",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "nURemBerg.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "fhhoF0UeRkAayTl3LbsC",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 imsia-tel:s0013 WS CDN § 40",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "nUreMberG.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fhhoF0UtMaiAjYHiL4E",
+        "headers": {
+          "Host": "nuremberg.xn--o39ap1aq6zfxb14v.shop"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 Powerd-By-s0013 GRPC CDN § 41",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "tls": {
+        "enabled": true,
+        "server_name": "HelsiNkI.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "yY1jeQei7h1T8ltLWZ",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 Powerd-By-s0013 WS CDN § 42",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "tls": {
+        "enabled": true,
+        "server_name": "hELsinKI.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/yY1jeQeicCTCqP5Kpx4Go",
+        "headers": {
+          "Host": "helsinki.xn--o39ap1aq6zfxb14v.shop"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 telegram-@s0013 GRPC CDN § 43",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "tls": {
+        "enabled": true,
+        "server_name": "asHBurn.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "bs55Ovr86OjhM4ByTpa",
+        "idle_timeout": "15s",
+        "ping_timeout": "15s"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 telegram-@s0013 WS CDN § 44",
+      "server": "zula.ir",
+      "server_port": 443,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "tls": {
+        "enabled": true,
+        "server_name": "aShbURn.xn--o39aP1aq6zfXb14V.ShOp",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/bs55Ovr86OzuubiHi",
+        "headers": {
+          "Host": "ashburn.xn--o39ap1aq6zfxb14v.shop"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 imsia-tel:s0013 TLS HTTPUPGRADE § 45",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 443,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "tls": {
+        "enabled": true,
+        "server_name": "nuremberg.raspberryip.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/fhhoF0U9snFgS4hh5UA",
+        "headers": {
+          "Host": "nuremberg.raspberryip.com"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇩🇪 imsia-tel:s0013 TLS GRPC § 46",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 443,
+      "uuid": "d3a59952-638e-4301-aa9e-b396fcdc85e9",
+      "security": "chacha20-poly1305",
+      "tls": {
+        "enabled": true,
+        "server_name": "nuremberg.raspberryip.com",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "grpc",
+        "service_name": "A2tCXDJTeRkAayTl3LbsC",
+        "idle_timeout": "1m55s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 imsia-tel:s0013 SHADOW TLS § 47",
+      "detour": "🇩🇪 imsia-tel:s0013 SHADOW TLS § 47 shadowtls-out §hide§",
+      "server": "",
+      "server_port": 0,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "ZmZlZWMxNDkyMThlNDJlZDlmMjc4NjkxNzUyYzk0YTI=:ZDNhNTk5NTI2MzhlNDMwMWFhOWViMzk2ZmNkYzg1ZTk=",
+      "udp_over_tcp": true
+    },
+    {
+      "type": "shadowtls",
+      "tag": "🇩🇪 imsia-tel:s0013 SHADOW TLS § 47 shadowtls-out §hide§",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 443,
+      "version": 3,
+      "password": "ffeec149-218e-42ed-9f27-8691752c94a2",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.idsoftware.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 imsia-tel:s0013 TLS H2 SHADOW § 48",
+      "detour": "🇩🇪 imsia-tel:s0013 TLS H2 SHADOW § 48 shadowtls-out §hide§",
+      "server": "",
+      "server_port": 0,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "ZmZlZWMxNDkyMThlNDJlZDlmMjc4NjkxNzUyYzk0YTI=:ZDNhNTk5NTI2MzhlNDMwMWFhOWViMzk2ZmNkYzg1ZTk=",
+      "udp_over_tcp": true
+    },
+    {
+      "type": "shadowtls",
+      "tag": "🇩🇪 imsia-tel:s0013 TLS H2 SHADOW § 48 shadowtls-out §hide§",
+      "server": "nuremberg.raspberryip.com",
+      "server_port": 443,
+      "version": 3,
+      "password": "ffeec149-218e-42ed-9f27-8691752c94a2",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.idsoftware.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 Powerd-By-s0013 TLS HTTPUPGRADE § 49",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 443,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "tls": {
+        "enabled": true,
+        "server_name": "helsinki.raspberryip.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/yY1jeQei1xnuXi4",
+        "headers": {
+          "Host": "helsinki.raspberryip.com"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇫🇮 Powerd-By-s0013 TLS GRPC § 50",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 443,
+      "uuid": "62b912c9-3629-494b-8206-09b89f102385",
+      "security": "chacha20-poly1305",
+      "tls": {
+        "enabled": true,
+        "server_name": "helsinki.raspberryip.com",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "grpc",
+        "service_name": "d8Mg0XtTEG6wjF7h1T8ltLWZ",
+        "idle_timeout": "1m55s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇮 Powerd-By-s0013 SHADOW TLS § 51",
+      "detour": "🇫🇮 Powerd-By-s0013 SHADOW TLS § 51 shadowtls-out §hide§",
+      "server": "",
+      "server_port": 0,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "NGM1MTVmZDJmMzdmNDBmZmFiNTQyYjMzZGRmZDE4NGY=:NjJiOTEyYzkzNjI5NDk0YjgyMDYwOWI4OWYxMDIzODU=",
+      "udp_over_tcp": true
+    },
+    {
+      "type": "shadowtls",
+      "tag": "🇫🇮 Powerd-By-s0013 SHADOW TLS § 51 shadowtls-out §hide§",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 443,
+      "version": 3,
+      "password": "4c515fd2-f37f-40ff-ab54-2b33ddfd184f",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ultimate-anonymity.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇮 Powerd-By-s0013 TLS H2 SHADOW § 52",
+      "detour": "🇫🇮 Powerd-By-s0013 TLS H2 SHADOW § 52 shadowtls-out §hide§",
+      "server": "",
+      "server_port": 0,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "NGM1MTVmZDJmMzdmNDBmZmFiNTQyYjMzZGRmZDE4NGY=:NjJiOTEyYzkzNjI5NDk0YjgyMDYwOWI4OWYxMDIzODU=",
+      "udp_over_tcp": true
+    },
+    {
+      "type": "shadowtls",
+      "tag": "🇫🇮 Powerd-By-s0013 TLS H2 SHADOW § 52 shadowtls-out §hide§",
+      "server": "helsinki.raspberryip.com",
+      "server_port": 443,
+      "version": 3,
+      "password": "4c515fd2-f37f-40ff-ab54-2b33ddfd184f",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ultimate-anonymity.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 telegram-@s0013 TLS HTTPUPGRADE § 53",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 443,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "tls": {
+        "enabled": true,
+        "server_name": "ashburn.raspberryip.com",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/bs55Ovr86OBZGxbMwHKD9UR",
+        "headers": {
+          "Host": "ashburn.raspberryip.com"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 telegram-@s0013 TLS GRPC § 54",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 443,
+      "uuid": "f3b622d4-08bb-47b4-9606-7dafd6071c73",
+      "security": "chacha20-poly1305",
+      "tls": {
+        "enabled": true,
+        "server_name": "ashburn.raspberryip.com",
+        "alpn": "h2",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "grpc",
+        "service_name": "r1qRz365EjjjhM4ByTpa",
+        "idle_timeout": "1m55s",
+        "ping_timeout": "15s"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 telegram-@s0013 SHADOW TLS § 55",
+      "detour": "🇺🇸 telegram-@s0013 SHADOW TLS § 55 shadowtls-out §hide§",
+      "server": "",
+      "server_port": 0,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "MmQzZWM4NWFjOWEwNGZmNWJlODg5NWJiMjFhYzhhMDI=:ZjNiNjIyZDQwOGJiNDdiNDk2MDY3ZGFmZDYwNzFjNzM=",
+      "udp_over_tcp": true
+    },
+    {
+      "type": "shadowtls",
+      "tag": "🇺🇸 telegram-@s0013 SHADOW TLS § 55 shadowtls-out §hide§",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 443,
+      "version": 3,
+      "password": "2d3ec85a-c9a0-4ff5-be88-95bb21ac8a02",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.fondationdefrance.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 telegram-@s0013 TLS H2 SHADOW § 56",
+      "detour": "🇺🇸 telegram-@s0013 TLS H2 SHADOW § 56 shadowtls-out §hide§",
+      "server": "",
+      "server_port": 0,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "MmQzZWM4NWFjOWEwNGZmNWJlODg5NWJiMjFhYzhhMDI=:ZjNiNjIyZDQwOGJiNDdiNDk2MDY3ZGFmZDYwNzFjNzM=",
+      "udp_over_tcp": true
+    },
+    {
+      "type": "shadowtls",
+      "tag": "🇺🇸 telegram-@s0013 TLS H2 SHADOW § 56 shadowtls-out §hide§",
+      "server": "ashburn.raspberryip.com",
+      "server_port": 443,
+      "version": 3,
+      "password": "2d3ec85a-c9a0-4ff5-be88-95bb21ac8a02",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.fondationdefrance.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "1-500",
+        "sleep": "0-500"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "geoip": {
+      "path": "geo-assets/sagernet-sing-geoip-geoip.db"
+    },
+    "geosite": {
+      "path": "geo-assets/sagernet-sing-geosite-geosite.db"
+    },
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      },
+      {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "geoip": "ir",
+        "outbound": "bypass"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "secret": "c3UoCoXd5eYLLlzP"
+    }
+  }
+}
