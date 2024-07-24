@@ -1,90 +1,152 @@
 {
- "log": {
-  "access": "",
-  "error": "",
-  "loglevel": "warning"
+ "dns": {
+  "queryStrategy": "UseIP",
+  "servers": [
+   {
+    "address": "9.9.9.9",
+    "skipFallback": false
+   }
+  ],
+  "tag": "dns_out"
  },
  "inbounds": [
   {
-   "tag": "socks",
    "port": 10808,
-   "listen": "0.0.0.0",
    "protocol": "socks",
-   "sniffing": {
-    "enabled": true,
-    "destOverride": [
-     "http",
-     "tls"
-    ],
-    "routeOnly": false
-   },
    "settings": {
     "auth": "noauth",
     "udp": true,
-    "allowTransparent": false
-   }
+    "userLevel": 8
+   },
+   "sniffing": {
+    "destOverride": [
+     "http",
+     "tls",
+     "fakedns"
+    ],
+    "enabled": true
+   },
+   "tag": "socks"
   },
   {
-   "tag": "http",
    "port": 10809,
-   "listen": "0.0.0.0",
    "protocol": "http",
-   "sniffing": {
-    "enabled": true,
-    "destOverride": [
-     "http",
-     "tls"
-    ],
-    "routeOnly": false
-   },
    "settings": {
-    "auth": "noauth",
-    "udp": true,
-    "allowTransparent": false
-   }
+    "userLevel": 8
+   },
+   "tag": "http"
   }
  ],
+ "log": {
+  "loglevel": "none"
+ },
  "outbounds": [
   {
-   "tag": "@vmesspv🇩🇪",
    "protocol": "vless",
+   "tag": "proxy",
+   "streamSettings": {
+    "network": "ws",
+    "security": "tls",
+    "sockopt": {
+     "dialerProxy": "fragment",
+     "tcpKeepAliveIdle": 100,
+     "tcpNoDelay": true
+    },
+    "tlsSettings": {
+     "allowInsecure": false,
+     "alpn": [
+      "h2"
+     ],
+     "fingerprint": "firefox",
+     "serverName": "join2.kiava.fun"
+    },
+    "wsSettings": {
+     "headers": {},
+     "host": "join2.kiava.fun",
+     "path": "\/?ed=2053"
+    }
+   },
+   "mux": {
+    "enabled": true,
+    "concurrency": 8,
+    "xudpConcurrency": 16,
+    "xudpProxyUDP443": "reject"
+   },
    "settings": {
     "vnext": [
      {
-      "address": "www.speedtest.net",
-      "port": 80,
+      "address": "www.bandmusic.ir",
+      "port": 443,
       "users": [
        {
-        "id": "c1b6bb40-68f2-442e-9ff4-79b996067d38",
-        "alterId": 0,
-        "security": "auto",
-        "encryption": "none"
+        "encryption": "none",
+        "id": "06438e81-82df-45d8-de1a-5de7f6f5d888",
+        "level": 8
        }
       ]
      }
     ]
+   }
+  },
+  {
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "UseIP"
+   },
+   "tag": "direct"
+  },
+  {
+   "protocol": "blackhole",
+   "settings": {
+    "response": {
+     "type": "http"
+    }
+   },
+   "tag": "block"
+  },
+  {
+   "tag": "fragment",
+   "protocol": "freedom",
+   "settings": {
+    "domainStrategy": "AsIs",
+    "fragment": {
+     "packets": "1-1",
+     "length": "1-3",
+     "interval": "4-8"
+    }
    },
    "streamSettings": {
-    "network": "ws",
-    "security": "none",
-    "wsSettings": {
-     "headers": {
-      "Host": "speedtest.net.Hafezdivan.Online.",
-      "User-Agent": "Irancell-Madaret-Jendas"
-     },
-     "path": "\/Mci-Bi-Namos?ed=3500"
+    "sockopt": {
+     "tcpKeepAliveIdle": 100,
+     "tcpNoDelay": true
     }
    }
   }
  ],
- "dns": {
-  "servers": [
-   "8.8.4.4"
-  ]
+ "policy": {
+  "levels": {
+   "8": {
+    "connIdle": 300,
+    "downlinkOnly": 1,
+    "handshake": 4,
+    "uplinkOnly": 1
+   }
+  },
+  "system": {
+   "statsOutboundDownlink": true,
+   "statsOutboundUplink": true
+  }
  },
+ "remarks": "✅💎⭐@vmesspv",
  "routing": {
   "domainStrategy": "IPIfNonMatch",
-  "rules": []
+  "rules": [
+   {
+    "network": "tcp,udp",
+    "outboundTag": "proxy",
+    "type": "field"
+   }
+  ]
  },
- "remarks": "@vmesspv🇩🇪"
+ "stats": {}
 }
