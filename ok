@@ -1,10 +1,4 @@
 {
- "dns": {
-  "hosts": {},
-  "servers": [
-   "https:\/\/1.1.1.1\/dns-query"
-  ]
- },
  "inbounds": [
   {
    "listen": "127.0.0.1",
@@ -20,7 +14,8 @@
      "http",
      "tls"
     ],
-    "enabled": true
+    "enabled": true,
+    "routeOnly": false
    },
    "tag": "socks"
   },
@@ -35,117 +30,46 @@
   }
  ],
  "log": {
-  "loglevel": "warning"
+  "loglevel": "none"
  },
  "outbounds": [
   {
-   "protocol": "shadowsocks",
-   "settings": {
-    "servers": [
-     {
-      "address": "104.16.61.8",
-      "port": 80,
-      "method": "aes-128-gcm",
-      "password": "apscCm0cH1TZa5\/uIjicFgvlAV1bQWQuyzt99QgSIxs=",
-      "uot": false
-     }
-    ]
-   },
-   "streamSettings": {
-    "network": "tcp",
-    "security": "",
-    "tcpSettings": {
-     "header": {
-      "request": {
-       "headers": {
-        "Host ": [
-         "speed.cloudflare.com\r\nHost: uk5.defineorange.info\r\nHost: speed.cloudflare.com\r\nUpgrade: websocket"
-        ]
-       },
-       "method": "POST",
-       "path": [
-        "\/t2"
-       ],
-       "version": "1.1"
-      },
-      "type": "http"
-     }
-    }
-   },
-   "tag": "tout"
-  },
-  {
    "mux": {
+    "concurrency": 1,
     "enabled": true,
-    "concurrency": -1,
-    "xudpConcurrency": 16,
-    "xudpProxyUDP443": "reject"
+    "xudpConcurrency": 1,
+    "xudpProxyUDP443": "allow"
    },
    "protocol": "vless",
    "settings": {
     "vnext": [
      {
-      "address": "www.speedtest.net",
+      "address": "www.parspack.com",
       "port": 80,
       "users": [
        {
         "encryption": "none",
-        "flow": "xtls-rprx-vision",
-        "id": "76676ebe-bd80-c27e-b589-d10e3a0bbf7e",
-        "level": 0
+        "flow": "",
+        "id": "bia--ZEDMODEON",
+        "level": 8,
+        "security": "auto"
        }
       ]
      }
     ]
    },
    "streamSettings": {
-    "sockopt": {
-     "dialerProxy": "header",
-     "tcpNoDelay": true
-    },
-    "network": "tcp",
-    "realitySettings": {
-     "fingerprint": "chrome",
-     "publicKey": "kTTmsXBeqCZZqzvvyvwZ5n7Bd1_8jYB7YpdWiF8emA0",
-     "serverName": "www.speedtest.net",
-     "shortId": "cf8211caf0",
-     "spiderX": "\/"
-    },
-    "security": "reality"
-   },
-   "tag": "uout"
-  },
-  {
-   "protocol": "freedom",
-   "settings": {},
-   "streamSettings": {
-    "network": "tcp",
-    "tcpSettings": {
-     "header": {
-      "request": {
-       "headers": {
-        "Host ": [
-         "speed.cloudflare.com\r\nHost: nl2.defineorange.info\r\nHost: speed.cloudflare.com\r\nUpgrade: websocket"
-        ]
-       },
-       "method": "POST",
-       "path": [
-        "\/time"
-       ],
-       "version": "1.1"
-      },
-      "type": "http"
-     }
+    "network": "ws",
+    "security": "",
+    "wsSettings": {
+     "headers": {
+      "Host": "asan.net.v2rayng6.6.6.6.ir.com.site.列男事事列上赛男.acountifyable.BUZZ.",
+      "User-Agent": "@ZEDMODEON"
+     },
+     "path": "\/@ZEDMODEON-ZEDMODEON-@ZEDMODEON-ZEDMODEON-TEL-ZEDMODEON-@ZEDMODEON?ed=2048"
     }
    },
-   "tag": "header"
-  },
-  {
-   "protocol": "dns",
-   "settings": {
-    "nonIPQuery": "skip"
-   },
-   "tag": "dout"
+   "tag": "proxy"
   },
   {
    "protocol": "freedom",
@@ -177,22 +101,14 @@
   }
  },
  "routing": {
-  "domainStrategy": "IPIfNonMatch",
+  "domainStrategy": "AsIs",
   "rules": [
    {
-    "port": "53",
-    "network": "udp",
-    "outboundTag": "dout",
-    "type": "field"
-   },
-   {
-    "network": "udp",
-    "outboundTag": "uout",
-    "type": "field"
+    "outboundTag": "proxy",
+    "port": "0-65535"
    }
   ]
  },
-
- "remarks": "🇬🇧@vmesspv",
- "stats": {}
+ "stats": {},
+ "remarks": "قطع که بروزرسانی کنید 🇩🇪@vmesspv"
 }
