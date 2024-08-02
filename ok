@@ -45,12 +45,12 @@
     "vnext": [
      {
       "address": "www.parspack.com",
-      "port": 80,
+      "port": 2095,
       "users": [
        {
         "encryption": "none",
         "flow": "",
-        "id": "bia--ZEDMODEON",
+        "id": "biain--ZEDMODEON",
         "level": 8,
         "security": "auto"
        }
