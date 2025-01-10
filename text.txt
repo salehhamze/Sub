@@ -71,3 +71,10 @@ vless://47532027-d24f-471e-b08d-dd825bb9d2c2@karshenashamrah.ir:2053?encryption=
 vless://47532027-d24f-471e-b08d-dd825bb9d2c2@karshenashamrah.ir:2053?encryption=none&security=tls&sni=karshenashamrah.ir&alpn=h2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=karshenashamrah.ir&path=%2FasdasdsadA#🇺🇸
 vless://47532027-d24f-471e-b08d-dd825bb9d2c2@karshenashamrah.ir:2053?encryption=none&security=tls&sni=soft98.ir&alpn=h2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=karshenashamrah.ir&path=%2FasdasdsadA#🇺🇸
 vless://47532027-d24f-471e-b08d-dd825bb9d2c2@karshenashamrah.ir:2053?encryption=none&security=tls&sni=www.speedtest.net&alpn=h2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=karshenashamrah.ir&path=%2FasdasdsadA#🇺🇸
+vless://47532027-d24f-471e-b08d-dd825bb9d2c2@karshenashamrah.ir:2053?encryption=none&security=tls&sni=karshenashamrah.ir&alpn=h2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=karshenashamrah.ir&path=%2FasdasdsadA#%F0%9F%87%AB%F0%9F%87%B7
+
+vless://47532027-d24f-471e-b08d-dd825bb9d2c2@karshenashamrah.ir:2053?encryption=none&security=tls&sni=speedtest.net&alpn=h2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=karshenashamrah.ir&path=%2FasdasdsadA#%F0%9F%87%AB%F0%9F%87%B7
+
+vless://47532027-d24f-471e-b08d-dd825bb9d2c2@karshenashamrah.ir:2053?encryption=none&security=tls&sni=soft98.ir&alpn=h2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=karshenashamrah.ir&path=%2FasdasdsadA#%F0%9F%87%AB%F0%9F%87%B7
+
+vless://47532027-d24f-471e-b08d-dd825bb9d2c2@karshenashamrah.ir:2053?encryption=none&security=tls&sni=zula.ir&alpn=h2%2Chttp%2F1.1&fp=chrome&allowInsecure=1&type=ws&host=karshenashamrah.ir&path=%2FasdasdsadA#%F0%9F%87%AB%F0%9F%87%B7
