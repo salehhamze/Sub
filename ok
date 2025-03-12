@@ -1,1 +1,150 @@
-{"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"destOverride":["http","tls"],"enabled":true,"routeOnly":false},"tag":"socks"},{"listen":"127.0.0.1","port":10809,"protocol":"http","settings":{"userLevel":8},"tag":"http"},{"listen":"127.0.0.1","port":2081,"protocol":"http","settings":{"userLevel":8},"tag":"http-1"}],"remarks":"وقتی قطع شد بروز رسانی کنید. (@vmesspv)🌍✅💎☀️","outbounds":[{"mux":{"concurrency":1,"enabled":false,"xudpConcurrency":1,"xudpProxyUDP443":"allow"},"protocol":"vless","settings":{"vnext":[{"address":"151.101.64.223","port":80,"users":[{"encryption":"none","flow":"","id":"dfc1a9ab-6241-4b73-92f7-b299fc6b7751","level":8,"security":"auto"}]}]},"streamSettings":{"network":"ws","security":"","wsSettings":{"headers":{"remarks":"𝒄𝒉𝒂𝒏𝒏𝒆𝒍 👉 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 آدرس تلگرام","Host":"l12.ru","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip","accept-language":"en-US,en;q=0.9,fa;q=0.8","cache-control":"max-age=0","Accept-Encoding":"gzip,deflate,br","sec-ch-ua":"\"GoogleChrome\";v=\"131\",\"Chromium\";v=\"131\",\"Not_ABrand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"none","sec-fetch-user":"?1","upgrade-insecure-requests":"1","User-Agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/119.0.0.0Safari/537.36"},"path":"/Telegram-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-XV2ry2-speedtest.net?ed=1080&id=dfc1a9ab-6241-4b73-92f7-b299fc6b7751"}},"tag":"proxy"},{"protocol":"freedom","settings":{},"tag":"direct"},{"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}],"dns":{"servers":["9.9.9.9","8.8.8.8"]},"policy":{"levels":{"8":{"connIdle":300,"uplinkOnly":5,"downlinkOnly":10,"handshake":4}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"routing":{"domainStrategy":"AsIs","rules":[{"outboundTag":"proxy","port":"0-65535","type":"field"}]},"stats":{}}
+{
+  "remarks": "وقتی قطع شد بروز رسانی کنید. (@vmesspv)🇩🇪✅💎☀️",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "jnir-addr.cybsecguru.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "simoRGH.hPcode.IR",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/Javid-SHAH-KingRezaPahlavi/?ed=2560",
+          "headers": {
+            "Host": "simoRGH.hPcode.IR"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "1-2",
+          "length": "4-6",
+          "interval": "8-15"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
+  }
+}
