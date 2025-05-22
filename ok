@@ -1,1 +1,165 @@
-{"dns": {"servers": ["94.140.14.15"]},"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"destOverride":["http","tls"],"enabled":true,"routeOnly":false},"tag":"socks"},{"listen":"127.0.0.1","port":10809,"protocol":"http","settings":{"userLevel":8},"tag":"http"},{"listen":"127.0.0.1","port":2081,"protocol":"http","settings":{"userLevel":8},"tag":"http-1"}],"remarks":"وقتی قطع شد بروز رسانی کنید. (@vmesspv)🌏✅💎☀️","outbounds":[{"mux":{"concurrency":1,"enabled":false,"xudpConcurrency":1,"xudpProxyUDP443":"allow"},"protocol":"vless","settings":{"vnext":[{"address":"172.66.45.34","port":80,"users":[{"encryption":"none","flow":"","id":"80d1fe59-60f4-4272-a280-820e1ef0a754","level":8,"security":"auto"}]}]},"streamSettings":{"network":"ws","security":"","wsSettings":{"headers":{"remarks":"𝒄𝒉𝒂𝒏𝒏𝒆𝒍 👉 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 آدرس تلگرام","Host":"microsoft.com.b2ng.com.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.kuyuesaspeedtest.netrag.com.l7vl8.com.s019857.com.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.xddns.ip-ddns.com.","User-Agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.37(KHTML,likeGecko)Chrome/119.0.0.0Safari/537.36"},"path":"/websocket?ed=1080&?q=🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️🧔🏼‍♂️"}},"tag":"proxy"},{"protocol":"freedom","settings":{},"tag":"direct"}, {"protocol": "dns","tag": "dns-out"},{"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}],"policy":{"levels":{"8":{"connIdle":300,"uplinkOnly":5,"downlinkOnly":10,"handshake":4}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"routing":{"domainStrategy":"AsIs","rules": [{"type": "field","port": "53","port": "1053","port": "443","outboundTag": "proxy"}, {"type": "field", "port": "53","outboundTag": "dns-out","enabled": true},{"type": "field","network": "udp","outboundTag": "direct"},{"type": "field","port": "0-65535","outboundTag": "proxy"}]},"stats":{}}
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "hosts": {
+      "domain:googleapis.cn": "googleapis.com"
+    },
+    "servers": [
+      "https://dns.controld.com/14ywbtpnksd"
+    ]
+  },
+ 
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls",
+          "fakedns"
+        ],
+        "enabled": true,
+        "routeOnly": false
+      },
+      "tag": "socks"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2087,
+            "users": [
+              {
+                "id": "9e769ce1-34be-4e3f-b0a6-823f30eb8f69",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "h3",
+            "h2"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "smart.makeforless.info",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "smart.makeforless.info"
+          }
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "20-40",
+          "interval": "1-2"
+        },
+        "noises": [
+          {
+            "delay": "10-16",
+            "packet": "10-20",
+            "type": "rand"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "sockopt": {
+          "TcpNoDelay": true,
+          "mark": 255
+        }
+      },
+      "tag": "fragment"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "223.5.5.5"
+        ],
+        "port": "53",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "network": "udp",
+        "port": "443",
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:private"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy"
+      }
+    ]
+  },
+  "remarks": "وقتی قطع شد بروز رسانی کنید. (@vmesspv)🇩🇪✅💎☀️"
+}
