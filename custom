@@ -1,127 +1,128 @@
-[ { "remarks": "serv40🇩🇪📌2",
+[ {"dns": {"servers": ["94.140.14.15"]},"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"destOverride":["http","tls"],"enabled":true,"routeOnly":true},"tag":"socks"},{"listen":"127.0.0.1","port":10809,"protocol":"http","settings":{"userLevel":8},"tag":"http"},{"listen":"127.0.0.1","port":2081,"protocol":"http","settings":{"userLevel":8},"tag":"http-1"}],"remarks":"25🌍✅💎⭐ @vmesspv","outbounds":[{"mux":{"concurrency":1,"enabled":false,"xudpConcurrency":1,"xudpProxyUDP443":"allow"},"protocol":"vless","settings":{"vnext":[{"address":"visa.org","port":2052,"users":[{"encryption":"none","flow":"","id":"80d1fe59-60f4-4272-a280-820e1ef0a754","level":8,"security":"auto"}]}]},"streamSettings":{"network":"ws","security":"","wsSettings":{"headers":{"remarks":"𝒄𝒉𝒂𝒏𝒏𝒆𝒍 👉 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 آدرس تلگرام","Host":"hit.ir.google.com.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.trepaspeedtest.betrat.com.eu.com.sh847.ir.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.fffffffff.ddns-ip.net.","User-Agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.37(KHTML,likeGecko)Chrome/119.0.0.0Safari/537.36"},"path":"/index.html"}},"tag":"proxy"},{"protocol":"freedom","settings":{},"tag":"direct"}, {"protocol": "dns","tag": "dns-out"},{"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}],"policy":{"levels":{"8":{"connIdle":300,"uplinkOnly":5,"downlinkOnly":10,"handshake":4}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"routing":{"domainStrategy":"AsIs","rules": [{"type": "field","port": "53","port": "1053","port": "443","outboundTag": "proxy"}, {"type": "field", "port": "53","outboundTag": "dns-out"},{"type": "field","network": "udp","outboundTag": "direct"},{"type": "field","network": "tcp","outboundTag": "proxy"}]},"stats":{}},
+
+{
   "log": {
-    "access": "",
-    "error": "",
     "loglevel": "warning"
   },
+  "dns": {
+    "hosts": {
+      "domain:googleapis.cn": "googleapis.com"
+    },
+    "servers": [
+      "https://dns.controld.com/14ywbtpnksd"
+    ]
+  },
+ 
   "inbounds": [
     {
-      "tag": "socks",
       "port": 10808,
-      "listen": "127.0.0.1",
       "protocol": "socks",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "routeOnly": false
-      },
       "settings": {
         "auth": "noauth",
         "udp": true,
-        "allowTransparent": false
-      }
-    },
-    {
-      "tag": "http",
-      "port": 10809,
-      "listen": "127.0.0.1",
-      "protocol": "http",
+        "userLevel": 8
+      },
       "sniffing": {
-        "enabled": true,
         "destOverride": [
           "http",
-          "tls"
+          "tls",
+          "fakedns"
         ],
+        "enabled": true,
         "routeOnly": false
       },
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "allowTransparent": false
-      }
+      "tag": "socks"
     }
   ],
   "outbounds": [
     {
-      "tag": "proxy",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
             "address": "www.speedtest.net",
-            "port": 8443,
+            "port": 2087,
             "users": [
               {
-                "id": "962c4650-ca89-4af8-9e3b-c3f9510ba07a",
-                "alterId": 0,
-                "email": "t@t.tt",
-                "security": "auto",
+                "id": "9e769ce1-34be-4e3f-b0a6-823f30eb8f69",
                 "encryption": "none",
-                "flow": ""
+                "level": 8
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "02.ev02-02-q2wx8ryz0vic3bfmd1sng7pjjn6lqk4p.tech",
           "alpn": [
-            "h2",
-            "http/1.1"
+            "h3",
+            "h2"
           ],
           "fingerprint": "chrome",
+          "serverName": "smart.makeforless.info",
           "show": false
         },
-        "grpcSettings": {
-          "multiMode": true,
-          "serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"
-        },
-        "sockopt": {
-          "dialerProxy": "fragment",
-          "tcpKeepAliveIdle": 100,
-          "mark": 255,
-          "tcpNoDelay": true
-        }
-      }
-    },
-    {
-      "tag": "fragment",
-      "protocol": "freedom",
-      "settings": {
-        "domainStrategy": "AsIs",
-        "fragment": {
-          "packets": "tlshello",
-          "length": "10-20",
-          "interval": "10-20"
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "smart.makeforless.info"
+          }
         }
       },
-      "streamSettings": {
-        "sockopt": {
-          "tcpNoDelay": true,
-          "tcpKeepAliveIdle": 100
-        }
-      }
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
+      },
+      "tag": "proxy"
     },
     {
-      "tag": "direct",
       "protocol": "freedom",
-      "settings": {}
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
     },
     {
-      "tag": "block",
       "protocol": "blackhole",
       "settings": {
         "response": {
           "type": "http"
         }
-      }
+      },
+      "tag": "block"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "20-40",
+          "interval": "1-2"
+        },
+        "noises": [
+          {
+            "delay": "10-16",
+            "packet": "10-20",
+            "type": "rand"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "sockopt": {
+          "TcpNoDelay": true,
+          "mark": 255
+        }
+      },
+      "tag": "fragment"
     }
   ],
   "routing": {
@@ -129,24 +130,44 @@
     "rules": [
       {
         "type": "field",
-        "inboundTag": [
-          "api"
+        "ip": [
+          "223.5.5.5"
         ],
-        "outboundTag": "api",
-        "enabled": true
+        "port": "53",
+        "outboundTag": "direct"
       },
       {
-        "id": "5627785659655799759",
+        "type": "field",
+        "network": "udp",
+        "port": "443",
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:private"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct"
+      },
+      {
         "type": "field",
         "port": "0-65535",
-        "outboundTag": "proxy",
-        "enabled": true
+        "outboundTag": "proxy"
       }
     ]
-  }
+  },
+  "remarks": "20🇩🇪✅💎☀️ @vmesspv"
 },
 
-{ "remarks": "serv42🇩🇪📌3",
+{
+  "remarks": "17🇩🇪✅💎⭐ @vmesspv",
   "log": {
     "access": "",
     "error": "",
@@ -199,11 +220,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "www.speedtest.net",
-            "port": 8443,
+            "address": "jnir-addr.cybsecguru.com",
+            "port": 443,
             "users": [
               {
-                "id": "8155d2bb-0eb4-40ff-ba1d-95df410a672a",
+                "id": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -215,11 +236,11 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "03.Ev02-02-q2wX8ryZ0vIC3BFMd1snG7pjjN6lqK4P.Tech",
+          "serverName": "zal.1221000.xyz",
           "alpn": [
             "h2",
             "http/1.1"
@@ -227,9 +248,11 @@
           "fingerprint": "chrome",
           "show": false
         },
-        "grpcSettings": {
-          "multiMode": true,
-          "serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"
+        "wsSettings": {
+          "path": "/Javid-SHAH-KingRezaPahlavi/?ed=2560",
+          "headers": {
+            "Host": "zal.1221000.xyz"
+          }
         },
         "sockopt": {
           "dialerProxy": "fragment",
@@ -237,6 +260,12 @@
           "mark": 255,
           "tcpNoDelay": true
         }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
       }
     },
     {
@@ -245,9 +274,9 @@
       "settings": {
         "domainStrategy": "AsIs",
         "fragment": {
-          "packets": "tlshello",
-          "length": "10-20",
-          "interval": "10-20"
+          "packets": "1-2",
+          "length": "4-6",
+          "interval": "8-15"
         }
       },
       "streamSettings": {
@@ -292,9 +321,8 @@
       }
     ]
   }
-},
-
-{ "remarks": "serv44🇩🇪📌1",
+},{
+  "remarks": "16🇩🇪✅💎⭐ @vmesspv",
   "log": {
     "access": "",
     "error": "",
@@ -347,11 +375,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "www.speedtest.net",
-            "port": 8443,
+            "address": "jnir-addr.cybsecguru.com",
+            "port": 443,
             "users": [
               {
-                "id": "962c4650-ca89-4af8-9e3b-c3f9510ba07a",
+                "id": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -363,11 +391,11 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "01.ev02-02-q2wx8ryz0vic3bfmd1sng7pjjn6lqk4p.tech",
+          "serverName": "simoRGH.hPcode.IR",
           "alpn": [
             "h2",
             "http/1.1"
@@ -375,9 +403,11 @@
           "fingerprint": "chrome",
           "show": false
         },
-        "grpcSettings": {
-          "multiMode": true,
-          "serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"
+        "wsSettings": {
+          "path": "/Javid-SHAH-KingRezaPahlavi/?ed=2560",
+          "headers": {
+            "Host": "simoRGH.hPcode.IR"
+          }
         },
         "sockopt": {
           "dialerProxy": "fragment",
@@ -385,6 +415,12 @@
           "mark": 255,
           "tcpNoDelay": true
         }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
       }
     },
     {
@@ -393,9 +429,9 @@
       "settings": {
         "domainStrategy": "AsIs",
         "fragment": {
-          "packets": "tlshello",
-          "length": "10-20",
-          "interval": "10-20"
+          "packets": "1-2",
+          "length": "4-6",
+          "interval": "8-15"
         }
       },
       "streamSettings": {
@@ -441,7 +477,8 @@
     ]
   }
 },
-{ "remarks": "serv45🇩🇪📌4",
+{
+  "remarks": "15🇩🇪✅💎⭐ @vmesspv",
   "log": {
     "access": "",
     "error": "",
@@ -494,11 +531,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "www.speedtest.net",
-            "port": 8443,
+            "address": "jnir-addr.cybsecguru.com",
+            "port": 443,
             "users": [
               {
-                "id": "253e78fc-d3eb-454c-89e5-3268f76c6276",
+                "id": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -510,11 +547,11 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "04.ev02-02-q2wx8ryz0vic3bfmd1sng7pjjn6lqk4p.tech",
+          "serverName": "rostam.29394900.xyz",
           "alpn": [
             "h2",
             "http/1.1"
@@ -522,9 +559,11 @@
           "fingerprint": "chrome",
           "show": false
         },
-        "grpcSettings": {
-          "multiMode": true,
-          "serviceName": "@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN,@Everyday_VPN"
+        "wsSettings": {
+          "path": "/Javid-SHAH-KingRezaPahlavi/?ed=2560",
+          "headers": {
+            "Host": "rostam.29394900.xyz"
+          }
         },
         "sockopt": {
           "dialerProxy": "fragment",
@@ -532,6 +571,12 @@
           "mark": 255,
           "tcpNoDelay": true
         }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
       }
     },
     {
@@ -540,9 +585,9 @@
       "settings": {
         "domainStrategy": "AsIs",
         "fragment": {
-          "packets": "tlshello",
-          "length": "10-20",
-          "interval": "10-20"
+          "packets": "1-2",
+          "length": "4-6",
+          "interval": "8-15"
         }
       },
       "streamSettings": {
@@ -588,154 +633,629 @@
     ]
   }
 },
-
-{  "remarks": "serv48🇫🇮📌 - @vmesspv",
- "log": {
-  "access": "",
-  "error": "",
-  "loglevel": "warning"
- },
- "inbounds": [
-  {
-   "tag": "socks",
-   "port": 10808,
-   "listen": "127.0.0.1",
-   "protocol": "socks",
-   "sniffing": {
-    "enabled": true,
-    "destOverride": [
-     "http",
-     "tls"
-    ],
-    "routeOnly": false
-   },
-   "settings": {
-    "auth": "noauth",
-    "udp": true,
-    "allowTransparent": false
-   }
+{
+  "remarks": "14🇩🇪✅💎⭐ @vmesspv",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
   },
-  {
-   "tag": "http",
-   "port": 10809,
-   "listen": "127.0.0.1",
-   "protocol": "http",
-   "sniffing": {
-    "enabled": true,
-    "destOverride": [
-     "http",
-     "tls"
-    ],
-    "routeOnly": false
-   },
-   "settings": {
-    "auth": "noauth",
-    "udp": true,
-    "allowTransparent": false
-   }
-  }
- ],
- "outbounds": [
-  {
-   "tag": "proxy",
-   "protocol": "vless",
-   "settings": {
-    "vnext": [
-     {
-      "address": "www.speedtest.net",
-      "port": 2087,
-      "users": [
-       {
-        "id": "HinaVPN",
-        "alterId": 0,
-        "email": "t@t.tt",
-        "security": "auto",
-        "encryption": "none",
-        "flow": ""
-       }
-      ]
-     }
-    ]
-   },
-   "streamSettings": {
-    "network": "ws",
-    "security": "tls",
-    "tlsSettings": {
-     "allowInsecure": false,
-     "serverName": "rOuTe.kLoXEN.teCh",
-     "alpn": [
-      "h2",
-      "http\/1.1"
-     ],
-     "fingerprint": "chrome",
-     "show": false
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
     },
-    "wsSettings": {
-     "path": "\/------@HinaVPN--------------@HinaVPN--------------@HinaVPN--------------@HinaVPN--------------@HinaVPN--------------@HinaVPN--------------@HinaVPN--------------@HinaVPN--------------@HinaVPN--------------@HinaVPN-------------",
-     "headers": {
-      "Host": "rOuTe.kLoXEN.teCh"
-     }
-    },
-    "sockopt": {
-     "dialerProxy": "fragment",
-     "tcpKeepAliveIdle": 100,
-     "mark": 255,
-     "tcpNoDelay": true
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
     }
-   }
-  },
-  {
-   "tag": "fragment",
-   "protocol": "freedom",
-   "settings": {
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "jnir-addr.cybsecguru.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "sohrab.690077.xyz",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/Javid-SHAH-KingRezaPahlavi/?ed=2560",
+          "headers": {
+            "Host": "sohrab.690077.xyz"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "1-2",
+          "length": "4-6",
+          "interval": "8-15"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
     "domainStrategy": "AsIs",
-    "fragment": {
-     "packets": "tlshello",
-     "length": "10-20",
-     "interval": "10-20"
-    }
-   },
-   "streamSettings": {
-    "sockopt": {
-     "tcpNoDelay": true,
-     "tcpKeepAliveIdle": 100
-    }
-   }
-  },
-  {
-   "tag": "direct",
-   "protocol": "freedom",
-   "settings": {}
-  },
-  {
-   "tag": "block",
-   "protocol": "blackhole",
-   "settings": {
-    "response": {
-     "type": "http"
-    }
-   }
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
   }
- ],
- "routing": {
-  "domainStrategy": "AsIs",
-  "rules": [
-   {
-    "type": "field",
-    "inboundTag": [
-     "api"
-    ],
-    "outboundTag": "api",
-    "enabled": true
-   },
-   {
-    "id": "5627785659655799759",
-    "type": "field",
-    "port": "0-65535",
-    "outboundTag": "proxy",
-    "enabled": true
-   }
-  ]
- }
+},
+{
+  "remarks": "13🇩🇪✅💎⭐ @vmesspv",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "jnir-addr.cybsecguru.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "rakhsh.4972616e.xyz",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/Javid-SHAH-KingRezaPahlavi/?ed=2560",
+          "headers": {
+            "Host": "rakhsh.4972616e.xyz"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "1-2",
+          "length": "4-6",
+          "interval": "8-15"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
+  }
+},
+{
+  "remarks": "12🇩🇪✅💎⭐ @vmesspv",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "jnir-addr.cybsecguru.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "siavash.6006900.xyz",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/Javid-SHAH-KingRezaPahlavi/?ed=2560",
+          "headers": {
+            "Host": "siavash.6006900.xyz"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "1-2",
+          "length": "4-6",
+          "interval": "8-15"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
+  }
+},
+{
+  "remarks": "11🇩🇪✅💎⭐ @vmesspv",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "jnir-addr.cybsecguru.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "ec8a65ad-aafc-4095-9b8c-ea10890ca629",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "caspian.pichondan.xyz",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/Javid-SHAH-KingRezaPahlavi/?ed=2560",
+          "headers": {
+            "Host": "caspian.pichondan.xyz"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "1-2",
+          "length": "4-6",
+          "interval": "8-15"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
+  }
 }
+
 ]
