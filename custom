@@ -1,52 +1,69 @@
 [ {"dns": {"servers": ["94.140.14.15"]},"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"destOverride":["http","tls"],"enabled":true,"routeOnly":true},"tag":"socks"},{"listen":"127.0.0.1","port":10809,"protocol":"http","settings":{"userLevel":8},"tag":"http"},{"listen":"127.0.0.1","port":2081,"protocol":"http","settings":{"userLevel":8},"tag":"http-1"}],"remarks":"25🌍✅💎⭐ @vmesspv","outbounds":[{"mux":{"concurrency":1,"enabled":false,"xudpConcurrency":1,"xudpProxyUDP443":"allow"},"protocol":"vless","settings":{"vnext":[{"address":"visa.org","port":2052,"users":[{"encryption":"none","flow":"","id":"80d1fe59-60f4-4272-a280-820e1ef0a754","level":8,"security":"auto"}]}]},"streamSettings":{"network":"ws","security":"","wsSettings":{"headers":{"remarks":"𝒄𝒉𝒂𝒏𝒏𝒆𝒍 👉 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 آدرس تلگرام","Host":"hit.ir.google.com.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.trepaspeedtest.betrat.com.eu.com.sh847.ir.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.fffffffff.ddns-ip.net.","User-Agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.37(KHTML,likeGecko)Chrome/119.0.0.0Safari/537.36"},"path":"/index.html"}},"tag":"proxy"},{"protocol":"freedom","settings":{},"tag":"direct"}, {"protocol": "dns","tag": "dns-out"},{"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}],"policy":{"levels":{"8":{"connIdle":300,"uplinkOnly":5,"downlinkOnly":10,"handshake":4}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"routing":{"domainStrategy":"AsIs","rules": [{"type": "field","port": "53","port": "1053","port": "443","outboundTag": "proxy"}, {"type": "field", "port": "53","outboundTag": "dns-out"},{"type": "field","network": "udp","outboundTag": "direct"},{"type": "field","network": "tcp","outboundTag": "proxy"}]},"stats":{}},
 
 {
+  "remarks": "26🇱🇻✅💎☘️ @vmesspv",
   "log": {
+    "access": "",
+    "error": "",
     "loglevel": "warning"
   },
-  "dns": {
-    "hosts": {
-      "domain:googleapis.cn": "googleapis.com"
-    },
-    "servers": [
-      "https://dns.controld.com/14ywbtpnksd"
-    ]
-  },
- 
   "inbounds": [
     {
+      "tag": "socks",
       "port": 10808,
+      "listen": "127.0.0.1",
       "protocol": "socks",
+      "sniffing": {
+        "enabled": false,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
       "settings": {
         "auth": "noauth",
         "udp": true,
-        "userLevel": 8
-      },
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
       "sniffing": {
+        "enabled": false,
         "destOverride": [
           "http",
-          "tls",
-          "fakedns"
+          "tls"
         ],
-        "enabled": true,
         "routeOnly": false
       },
-      "tag": "socks"
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
     }
   ],
   "outbounds": [
     {
+      "tag": "proxy",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "www.speedtest.net",
-            "port": 2087,
+            "address": "homestead.com",
+            "port": 443,
             "users": [
               {
-                "id": "9e769ce1-34be-4e3f-b0a6-823f30eb8f69",
+                "id": "eaa140af-47da-4201-a1e2-004833106835",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
                 "encryption": "none",
-                "level": 8
+                "flow": ""
               }
             ]
           }
@@ -55,74 +72,61 @@
       "streamSettings": {
         "network": "ws",
         "security": "tls",
-        "sockopt": {
-          "dialerProxy": "fragment"
-        },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
+          "serverName": "raYAn-nG-4.saMAn.DpdNS.orG",
           "alpn": [
-            "h3",
-            "h2"
+            "h2",
+            "http/1.1"
           ],
           "fingerprint": "chrome",
-          "serverName": "smart.makeforless.info",
           "show": false
         },
         "wsSettings": {
-          "path": "/",
+          "path": "/@Rayan_Config",
           "headers": {
-            "Host": "smart.makeforless.info"
+            "Host": "raYAn-nG-4.saMAn.DpdNS.orG"
           }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
         }
-      },
-      "mux": {
-        "enabled": true,
-        "concurrency": 8,
-        "xudpConcurrency": 8,
-        "xudpProxyUDP443": "reject"
-      },
-      "tag": "proxy"
+      }
     },
     {
+      "tag": "fragment",
       "protocol": "freedom",
       "settings": {
-        "domainStrategy": "UseIP"
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "tlshello",
+          "length": "6-8",
+          "interval": "1-2"
+        }
       },
-      "tag": "direct"
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
     },
     {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
       "protocol": "blackhole",
       "settings": {
         "response": {
           "type": "http"
         }
-      },
-      "tag": "block"
-    },
-    {
-      "protocol": "freedom",
-      "settings": {
-        "fragment": {
-          "packets": "tlshello",
-          "length": "20-40",
-          "interval": "1-2"
-        },
-        "noises": [
-          {
-            "delay": "10-16",
-            "packet": "10-20",
-            "type": "rand"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "sockopt": {
-          "TcpNoDelay": true,
-          "mark": 255
-        }
-      },
-      "tag": "fragment"
+      }
     }
   ],
   "routing": {
@@ -130,40 +134,42 @@
     "rules": [
       {
         "type": "field",
-        "ip": [
-          "223.5.5.5"
+        "inboundTag": [
+          "api"
         ],
-        "port": "53",
-        "outboundTag": "direct"
+        "outboundTag": "api",
+        "enabled": true
       },
       {
+        "id": "5465425548310166497",
         "type": "field",
-        "network": "udp",
-        "port": "443",
-        "outboundTag": "block"
-      },
-      {
-        "type": "field",
+        "outboundTag": "direct",
         "domain": [
-          "geosite:private"
+          "domain:ir",
+          "geosite:cn"
         ],
-        "outboundTag": "direct"
+        "enabled": true
       },
       {
+        "id": "5425034033205580637",
         "type": "field",
+        "outboundTag": "direct",
         "ip": [
-          "geoip:private"
+          "geoip:private",
+          "geoip:cn",
+          "geoip:ir"
         ],
-        "outboundTag": "direct"
+        "enabled": true
       },
       {
+        "id": "5627785659655799759",
         "type": "field",
         "port": "0-65535",
-        "outboundTag": "proxy"
+        "outboundTag": "proxy",
+        "enabled": true
       }
     ]
-  },
-  "remarks": "20🇩🇪✅💎☀️ @vmesspv"
+  }
 },
 
 {
