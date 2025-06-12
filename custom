@@ -427,7 +427,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "kavir.lnmarketplace.net",
+            "address": "89.144.35.100",
             "port": 443,
             "users": [
               {
@@ -569,7 +569,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "kavir.lnmarketplace.net",
+            "address": "89.144.25.236",
             "port": 443,
             "users": [
               {
