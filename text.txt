@@ -1,4 +1,5 @@
-vless://7db421d8-cee2-4d7b-8eb1-1307efb25a07@s.fursaw.xyz:6000?type=ws&security=none&path=%2Fconnect%2Fws%2F#Iran%202🇮🇷@vmesspv
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIklyYW4gMVx1RDgzQ1x1RERFRVx1RDgzQ1x1RERGN0B2bWVzc3B2IiwNCiAgImFkZCI6ICJpci5mdXJzYXcueHl6IiwNCiAgInBvcnQiOiAiNDQzIiwNCiAgImlkIjogIjdkYjQyMWQ4LWNlZTItNGQ3Yi04ZWIxLTEzMDdlZmIyNWEwNyIsDQogICJhaWQiOiAiMCIsDQogICJzY3kiOiAiYXV0byIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAicGtnYnVpbGQub3JnIiwNCiAgInBhdGgiOiAiL2Nvbm5lY3QvZGUvIiwNCiAgInRscyI6ICJ0bHMiLA0KICAic25pIjogInBrZ2J1aWxkLm9yZyIsDQogICJhbHBuIjogIiINCn0=
+vless://7db421d8-cee2-4d7b-8eb1-1307efb25a07@s.fursaw.xyz:6000?type=ws&security=none&path=%2Fconnect%2Fws%2F#Iran%202🇮🇷
 vless://7db421d8-cee2-4d7b-8eb1-1307efb25a07@85.133.234.117:6000?type=ws&security=none&path=%2Fconnect%2Fws%2F#Iran%203🇮🇷
 vless://7db421d8-cee2-4d7b-8eb1-1307efb25a07@85.133.234.124:6000?type=ws&security=none&path=%2Fconnect%2Fws%2F#Iran%204🇮🇷
 vless://7db421d8-cee2-4d7b-8eb1-1307efb25a07@85.133.234.125:6000?type=ws&security=none&path=%2Fconnect%2Fws%2F#Iran%205🇮🇷
