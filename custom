@@ -1,13 +1,4 @@
-
-
-
-
-[ {"dns": {"servers": ["94.140.14.15"]},"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"destOverride":["http","tls"],"enabled":true,"routeOnly":false},"tag":"socks"},{"listen":"127.0.0.1","port":10809,"protocol":"http","settings":{"userLevel":8},"tag":"http"},{"listen":"127.0.0.1","port":2081,"protocol":"http","settings":{"userLevel":8},"tag":"http-1"}],"remarks":"🌍✅💎🌟","outbounds":[{"mux":{"concurrency":1,"enabled":false,"xudpConcurrency":1,"xudpProxyUDP443":"allow"},"protocol":"vless","settings":{"vnext":[{"address":"104.18.26.90","port":2052,"users":[{"encryption":"none","flow":"","id":"80d1fe59-60f4-4272-a280-820e1ef0a754","level":8,"security":"auto"}]}]},"streamSettings":{"network":"ws","security":"","wsSettings":{"headers":{"remarks":"𝒄𝒉𝒂𝒏𝒏𝒆𝒍 👉 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 آدرس تلگرام","Host":"hit.ir.google.com.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.trepaspeedtest.betrat.com.eu.com.sh847.ir.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.fffffffff.ddns-ip.net.","User-Agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.37(KHTML,likeGecko)Chrome/119.0.0.0Safari/537.36"},"path":"/index.html"}},"tag":"proxy"},{"protocol":"freedom","settings":{},"tag":"direct"}, {"protocol": "dns","tag": "dns-out"},{"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}],"policy":{"levels":{"8":{"connIdle":300,"uplinkOnly":5,"downlinkOnly":10,"handshake":4}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"routing":{"domainStrategy":"AsIs","rules": [{"type": "field","port": "53","port": "1053","port": "443","outboundTag": "proxy"}, {"type": "field", "port": "53","outboundTag": "dns-out"},{"type": "field","network": "udp","outboundTag": "direct"},{"type": "field","network": "tcp","outboundTag": "proxy"}]},"stats":{}},
-
-{"dns":{"servers":["94.140.14.15"]},"inbounds":[{"listen":"127.0.0.1","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"destOverride":["http","tls"],"enabled":true,"routeOnly":false},"tag":"socks"},{"listen":"127.0.0.1","port":10809,"protocol":"http","settings":{"userLevel":8},"tag":"http"},{"listen":"127.0.0.1","port":2081,"protocol":"http","settings":{"userLevel":8},"tag":"http-1"}],"remarks":"وقتی قطع شد بروز رسانی کنید. (@vmesspv)🌎✅💎🔁☀️","outbounds":[{"mux":{"concurrency":1,"enabled":false,"xudpConcurrency":1,"xudpProxyUDP443":"allow"},"protocol":"vless","settings":{"vnext":[{"address":"www.speedtest.net","port":443,"users":[{"encryption":"none","flow":"","id":"80d1fe59-60f4-4272-a280-820e1ef0a754","level":8,"security":"auto"}]}]},"streamSettings":{"network":"ws","security":"tls","tlsSettings":{"allowInsecure":false,"alpn":[null],"fingerprint":null,"publicKey":"","serverName":"Ww1.gOOGlE.COM.wWW.SPeEDtesT.NEt.PuBgMOBILe.dNS-DynAMic.neT","shortId":"","show":false,"spiderX":""},"wsSettings":{"headers":{"remarks":"𝒄𝒉𝒂𝒏𝒏𝒆𝒍 👉 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 آدرس تلگرام","Host":"Ww1.gOOGlE.COM.wWW.SPeEDtesT.NEt.PuBgMOBILe.dNS-DynAMic.neT","User-Agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.37(KHTML,likeGecko)Chrome/119.0.0.0Safari/537.36"},"path":"/index.html?ed=2048"}},"proxySettings":{
-"tag":"fragment",
-"transportLayer":true
-},"tag":"proxy"},{"protocol":"freedom","settings":{},"tag":"direct"},{"protocol":"freedom","tag":"fragment","domainStrategy":"UseIP","sniffing":{"enabled":true,"destOverride":["http","tls"]},"settings":{"fragment":{"packets":"tlshello","length":"100-200","interval":"10-20"}},"streamSettings":{"sockopt":{"tcpNoDelay":true,"domainStrategy":"UseIP"}}},{"protocol":"dns","tag":"dns-out"},{"protocol":"blackhole","settings":{"response":{"type":"http"}},"tag":"block"}],"policy":{"levels":{"8":{"connIdle":300,"uplinkOnly":5,"downlinkOnly":10,"handshake":4}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","port":"53","port":"1053","port":"443","outboundTag":"proxy"},{"type":"field","port":"53","outboundTag":"dns-out"},{"type":"field","network":"udp","outboundTag":"direct"},{"type":"field","network":"tcp","outboundTag":"proxy"}]},"stats":{}},
+[ 
 
 
 {
@@ -149,225 +140,225 @@
     }
   ],
   "stats": {},
-  "remarks": "36🇳🇱✅💎☄️ @vmesspv"
+  "remarks": "📌🇳🇱✅💎☄️ @vmesspv وقتی قطع شد بروز رسانی کنید."
 },
 
 
 {
-  "remarks": "37🇦🇺",
+  "dns": {
+    "servers": [
+      "94.140.14.15"
+    ]
+  },
   "inbounds": [
     {
-      "port": 10808,
       "listen": "127.0.0.1",
+      "port": 10808,
       "protocol": "socks",
       "settings": {
         "auth": "noauth",
-        "udp": true
+        "udp": true,
+        "userLevel": 8
       },
       "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "prox-au.pointtoserver.com",
-            "port": 10799,
-            "users": [
-              {
-                "user": "purevpn0s14356271",
-                "pass": "IUjWlr0gAPZSMc"
-              }
-            ]
-          }
-        ]
-      },
-      "tag": "proxy"
-    },
-    {
-      "protocol": "freedom",
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "tag": "block"
-    }
-  ],
-  "dns": {
-    "servers": ["1.1.1.1"]
-  },
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "type": "field",
-        "domain": ["geosite:cn"],
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "ip": ["geoip:cn"],
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "network": "udp",
-        "port": "443",
-        "outboundTag": "block"
-      }
-    ]
-  }
-},
-
-
-{"remarks":"38🇺🇸✅💎💫 @vmesspv","log":{"access":"","error":"","loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}},{"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false},"settings":{"auth":"noauth","udp":true,"allowTransparent":false}}],"outbounds":[{"tag":"proxy","protocol":"vmess","settings":{"vnext":[{"address":"172.66.168.210","port":443,"users":[{"id":"de94cc0a-0592-4969-b1fc-97ea8f0ea0b3","alterId":0,"email":"t@t.tt","security":"auto","encryption":"none","flow":""}]}]},"streamSettings":{"network":"ws","security":"tls","tlsSettings":{"allowInsecure":false,"serverName":"US.kkP.ME.Eu.oRG","alpn":["h2","http/1.1"],"fingerprint":"chrome","show":false},"wsSettings":{"path":"/aa","headers":{"Host":"US.kkP.ME.Eu.oRG"}},"sockopt":{"dialerProxy":"fragment","tcpKeepAliveIdle":100,"mark":255,"tcpNoDelay":true}}},{"tag":"fragment","protocol":"freedom","settings":{"domainStrategy":"AsIs","fragment":{"packets":"tlshello","length":"6-9","interval":"1-2"}},"streamSettings":{"sockopt":{"tcpNoDelay":true,"tcpKeepAliveIdle":100}}},{"tag":"direct","protocol":"freedom","settings":{}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}}}],"routing":{"domainStrategy":"AsIs","rules":[{"type":"field","inboundTag":["api"],"outboundTag":"api","enabled":true},{"id":"5465425548310166497","type":"field","outboundTag":"direct","domain":["domain:ir","geosite:cn"],"enabled":true},{"id":"5425034033205580637","type":"field","outboundTag":"direct","ip":["geoip:private","geoip:cn","geoip:ir"],"enabled":true},{"id":"5627785659655799759","type":"field","port":"0-65535","outboundTag":"proxy","enabled":true}]}},
-
-{"remarks": "39🇬🇧", "inbounds": [ { "port": 10808, "listen": "127.0.0.1", "protocol": "socks", "settings/?": { "auth": "noauth", "udp": true }, "sniffing": { "enabled": true, "destOverride": ["http", "tls"] } } ], "outbounds": [ { "protocol": "http", "settings": { "servers": [ { "address": "88.150.154.27", "port": 8080, "users": [ { "user": "BugFreeNet", "pass": "BugFreeNet" } ] } ] }, "tag": "proxy" }, { "protocol": "freedom", "tag": "direct" }, { "protocol": "blackhole", "tag": "block" } ], "dns": { "servers": ["1.1.1.1"] }, "routing": { "domainStrategy": "IPIfNonMatch", "rules": [ { "type": "field", "domain": ["geosite:cn"], "outboundTag": "direct" }, { "type": "field", "ip": ["geoip:cn"], "outboundTag": "direct" }, { "type": "field", "domain": ["domain:googleapis.cn"], "outboundTag": "proxy" }, { "type": "field", "network": "udp", "port": "443", "outboundTag": "block" } ] }
-},
-
-{
-  "remarks": "40🇩🇪",
-  "inbounds": [
-    {
-      "port": 10808,
-      "listen": "127.0.0.1",
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "prox-de.pointtoserver.com",
-            "port": 10780,
-            "users": [
-              {
-                "user": "purevpn0s14356271",
-                "pass": "IUjWlr0gAPZSMc"
-              }
-            ]
-          }
-        ]
-      },
-      "tag": "proxy"
-    },
-    {
-      "protocol": "freedom",
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "tag": "block"
-    }
-  ],
-  "dns": {
-    "servers": ["1.1.1.1"]
-  },
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "type": "field",
-        "domain": ["geosite:cn"],
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "ip": ["geoip:cn"],
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "network": "udp",
-        "port": "443",
-        "outboundTag": "block"
-      }
-    ]
-  }
-},
-
-
-
-{ "dns": { "hosts": { "domain:googleapis.cn": "googleapis.com", "dns.alidns.com": [ "223.5.5.5", "223.6.6.6", "2400:3200::1", "2400:3200:baba::1" ], "one.one.one.one": [ "1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001" ], "dot.pub": [ "1.12.12.12", "120.53.53.53" ], "dns.google": [ "8.8.8.8", "8.8.4.4", "2001:4860:4860::8888", "2001:4860:4860::8844" ], "dns.quad9.net": [ "9.9.9.9", "149.112.112.112", "2620:fe::fe", "2620:fe::9" ], "common.dot.dns.yandex.net": [ "77.88.8.8", "77.88.8.1", "2a02:6b8::feed:0ff", "2a02:6b8:0:1::feed:0ff" ] }, "servers": [ "1.1.1.1", { "address": "1.1.1.1", "domains": [ "domain:googleapis.cn", "domain:gstatic.com" ] }, { "address": "223.5.5.5", "domains": [ "domain:alidns.com", "domain:doh.pub", "domain:dot.pub", "domain:360.cn", "domain:onedns.net", "geosite:cn" ], "expectIPs": [ "geoip:cn" ], "skipFallback": true } ] }, "inbounds": [ { "listen": "127.0.0.1", "port": 10808, "protocol": "socks", "settings": { "auth": "noauth", "udp": true, "userLevel": 8 }, "sniffing": { "destOverride": [ "http", "tls" ], "enabled": true, "routeOnly": false }, "tag": "socks" } ], "log": { "loglevel": "warning" }, "outbounds": [ { "mux": { "concurrency": -1, "enabled": false }, "protocol": "vless", "settings": { "vnext": [ { "address": "104.17.147.22", "port": 443, "users": [ { "encryption": "none", "id": "89b3cbba-e6ac-485a-9481-976a0415eab9", "level": 8 } ] } ] }, "streamSettings": { "network": "ws", "security": "tls", "sockopt": { "dialerProxy": "fragment" }, "tlsSettings": { "allowInsecure": false, "alpn": [ "h2", "http/1.1" ], "fingerprint": "randomized", "serverName": "UUHuhyYgESDfgh.UyHjhgvgFCjgujhBuILbVFDXdxM.xYZ", "show": false }, "wsSettings": { "headers": { "Host": "UuhUHYygESDfgh.uYhJhGVgfCjgujhbUiLbVFdXDXM.XyZ" }, "path": "/egFIvRfmDaCdL5Uk/ODQuMjM1LjE2OS4yMzQ=?ed=2560/" } }, "tag": "proxy" }, { "protocol": "freedom", "settings": { "domainStrategy": "UseIP" }, "tag": "direct" }, { "protocol": "blackhole", "settings": { "response": { "type": "http" } }, "tag": "block" }, { "protocol": "freedom", "settings": { "fragment": { "interval": "10-20", "length": "50-100", "packets": "tlshello" }, "noises": [ { "delay": "10-16", "packet": "10-20", "type": "rand" } ] }, "streamSettings": { "network": "tcp", "sockopt": { "TcpNoDelay": true, "mark": 255 } }, "tag": "fragment" } ], "remarks": "41🇳🇱✅💎💫 @vmesspv", "routing": { "domainStrategy": "AsIs", "rules": [ { "ip": [ "1.1.1.1" ], "outboundTag": "proxy", "port": "53", "type": "field" }, { "ip": [ "223.5.5.5" ], "outboundTag": "direct", "port": "53", "type": "field" }, { "domain": [ "domain:googleapis.cn", "domain:gstatic.com" ], "outboundTag": "proxy", "type": "field" }, { "network": "udp", "outboundTag": "block", "port": "443", "type": "field" }, { "ip": [ "geoip:private" ], "outboundTag": "direct", "type": "field" }, { "domain": [ "geosite:private" ], "outboundTag": "direct", "type": "field" }, { "ip": [ "223.5.5.5", "223.6.6.6", "2400:3200::1", "2400:3200:baba::1", "119.29.29.29", "1.12.12.12", "120.53.53.53", "2402:4e00::", "2402:4e00:1::", "180.76.76.76", "2400:da00::6666", "114.114.114.114", "114.114.115.115", "114.114.114.119", "114.114.115.119", "114.114.114.110", "114.114.115.110", "180.184.1.1", "180.184.2.2", "101.226.4.6", "218.30.118.6", "123.125.81.6", "140.207.198.6", "1.2.4.8", "210.2.4.8", "52.80.66.66", "117.50.22.22", "2400:7fc0:849e:200::4", "2404:c2c0:85d8:901::4", "117.50.10.10", "52.80.52.52", "2400:7fc0:849e:200::8", "2404:c2c0:85d8:901::8", "117.50.60.30", "52.80.60.30" ], "outboundTag": "direct", "type": "field" }, { "domain": [ "domain:alidns.com", "domain:doh.pub", "domain:dot.pub", "domain:360.cn", "domain:onedns.net" ], "outboundTag": "direct", "type": "field" }, { "ip": [ "geoip:cn" ], "outboundTag": "direct", "type": "field" }, { "domain": [ "geosite:cn" ], "outboundTag": "direct", "type": "field" } ] } },
-{
-  "remarks": "26🇱🇻✅💎☘️ @vmesspv",
-  "log": {
-    "access": "",
-    "error": "",
-    "loglevel": "warning"
-  },
-  "inbounds": [
-    {
-      "tag": "socks",
-      "port": 10808,
-      "listen": "127.0.0.1",
-      "protocol": "socks",
-      "sniffing": {
-        "enabled": false,
         "destOverride": [
           "http",
           "tls"
         ],
+        "enabled": true,
         "routeOnly": false
       },
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "allowTransparent": false
-      }
+      "tag": "socks"
     },
     {
-      "tag": "http",
+      "listen": "127.0.0.1",
       "port": 10809,
-      "listen": "127.0.0.1",
       "protocol": "http",
-      "sniffing": {
-        "enabled": false,
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "routeOnly": false
-      },
       "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "allowTransparent": false
-      }
+        "userLevel": 8
+      },
+      "tag": "http"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 2081,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http-1"
     }
   ],
+  "remarks": "@vmesspv 🌍✅💎🌟",
   "outbounds": [
     {
-      "tag": "proxy",
+      "mux": {
+        "concurrency": 1,
+        "enabled": false,
+        "xudpConcurrency": 1,
+        "xudpProxyUDP443": "allow"
+      },
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "homestead.com",
+            "address": "104.18.26.90",
+            "port": 2052,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "80d1fe59-60f4-4272-a280-820e1ef0a754",
+                "level": 8,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "",
+        "wsSettings": {
+          "headers": {
+            "remarks": "𝒄𝒉𝒂𝒏𝒏𝒆𝒍 👉 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 آدرس تلگرام",
+            "Host": "hit.ir.google.com.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.trepaspeedtest.betrat.com.eu.com.sh847.ir.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.fffffffff.ddns-ip.net.",
+            "User-Agent": "Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.37(KHTML,likeGecko)Chrome/119.0.0.0Safari/537.36"
+          },
+          "path": "/index.html"
+        }
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "uplinkOnly": 5,
+        "downlinkOnly": 10,
+        "handshake": 4
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "port": "443",
+        "outboundTag": "proxy"
+      },
+      {
+        "type": "field",
+        "port": "53",
+        "outboundTag": "dns-out"
+      },
+      {
+        "type": "field",
+        "network": "udp",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "network": "tcp",
+        "outboundTag": "proxy"
+      }
+    ]
+  },
+  "stats": {}
+},
+
+
+{
+  "dns": {
+    "servers": [
+      "94.140.14.15"
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": false
+      },
+      "tag": "socks"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 2081,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http-1"
+    }
+  ],
+  "remarks": "@vmesspv 🌎✅💎☀️",
+  "outbounds": [
+    {
+      "mux": {
+        "concurrency": 1,
+        "enabled": false,
+        "xudpConcurrency": 1,
+        "xudpProxyUDP443": "allow"
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
             "port": 443,
             "users": [
               {
-                "id": "eaa140af-47da-4201-a1e2-004833106835",
-                "alterId": 0,
-                "email": "t@t.tt",
-                "security": "auto",
                 "encryption": "none",
-                "flow": ""
+                "flow": "",
+                "id": "80d1fe59-60f4-4272-a280-820e1ef0a754",
+                "level": 8,
+                "security": "auto"
               }
             ]
           }
@@ -377,111 +368,417 @@
         "network": "ws",
         "security": "tls",
         "tlsSettings": {
-          "allowInsecure": true,
-          "serverName": "raYAn-nG-4.saMAn.DpdNS.orG",
+          "allowInsecure": false,
           "alpn": [
-            "h2",
-            "http/1.1"
+            null
           ],
-          "fingerprint": "chrome",
-          "show": false
+          "publicKey": "",
+          "serverName": "Ww1.gOOGlE.COM.wWW.SPeEDtesT.NEt.PuBgMOBILe.dNS-DynAMic.neT",
+          "shortId": "",
+          "show": false,
+          "spiderX": ""
         },
         "wsSettings": {
-          "path": "/@Rayan_Config",
           "headers": {
-            "Host": "raYAn-nG-4.saMAn.DpdNS.orG"
-          }
-        },
-        "sockopt": {
-          "dialerProxy": "fragment",
-          "tcpKeepAliveIdle": 100,
-          "mark": 255,
-          "tcpNoDelay": true
+            "remarks": "𝒄𝒉𝒂𝒏𝒏𝒆𝒍 👉 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 آدرس تلگرام",
+            "Host": "Ww1.gOOGlE.COM.wWW.SPeEDtesT.NEt.PuBgMOBILe.dNS-DynAMic.neT",
+            "User-Agent": "Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.37(KHTML,likeGecko)Chrome/119.0.0.0Safari/537.36"
+          },
+          "path": "/index.html?ed=2048"
         }
-      }
+      },
+      "proxySettings": {
+        "tag": "fragment",
+        "transportLayer": true
+      },
+      "tag": "proxy"
     },
     {
-      "tag": "fragment",
       "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "freedom",
+      "tag": "fragment",
+      "domainStrategy": "UseIP",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
       "settings": {
-        "domainStrategy": "AsIs",
         "fragment": {
           "packets": "tlshello",
-          "length": "6-8",
-          "interval": "1-2"
+          "length": "100-200",
+          "interval": "10-20"
         }
       },
       "streamSettings": {
         "sockopt": {
           "tcpNoDelay": true,
-          "tcpKeepAliveIdle": 100
+          "domainStrategy": "UseIP"
         }
       }
     },
     {
-      "tag": "direct",
-      "protocol": "freedom",
-      "settings": {}
+      "protocol": "dns",
+      "tag": "dns-out"
     },
     {
-      "tag": "block",
       "protocol": "blackhole",
       "settings": {
         "response": {
           "type": "http"
         }
-      }
+      },
+      "tag": "block"
     }
   ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "uplinkOnly": 5,
+        "downlinkOnly": 10,
+        "handshake": 4
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
   "routing": {
     "domainStrategy": "AsIs",
     "rules": [
       {
         "type": "field",
-        "inboundTag": [
-          "api"
-        ],
-        "outboundTag": "api",
-        "enabled": true
+        "port": "443",
+        "outboundTag": "proxy"
       },
       {
-        "id": "5465425548310166497",
         "type": "field",
-        "outboundTag": "direct",
-        "domain": [
-          "domain:ir",
+        "port": "53",
+        "outboundTag": "dns-out"
+      },
+      {
+        "type": "field",
+        "network": "udp",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "network": "tcp",
+        "outboundTag": "proxy"
+      }
+    ]
+  },
+  "stats": {}
+},
+
+
+{
+  "dns": {
+    "hosts": {
+      "domain:googleapis.cn": "googleapis.com",
+      "dns.alidns.com": [
+        "223.5.5.5",
+        "223.6.6.6",
+        "2400:3200::1",
+        "2400:3200:baba::1"
+      ],
+      "one.one.one.one": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      ],
+      "dot.pub": [
+        "1.12.12.12",
+        "120.53.53.53"
+      ],
+      "dns.google": [
+        "8.8.8.8",
+        "8.8.4.4",
+        "2001:4860:4860::8888",
+        "2001:4860:4860::8844"
+      ],
+      "dns.quad9.net": [
+        "9.9.9.9",
+        "149.112.112.112",
+        "2620:fe::fe",
+        "2620:fe::9"
+      ],
+      "common.dot.dns.yandex.net": [
+        "77.88.8.8",
+        "77.88.8.1",
+        "2a02:6b8::feed:0ff",
+        "2a02:6b8:0:1::feed:0ff"
+      ]
+    },
+    "servers": [
+      "1.1.1.1",
+      {
+        "address": "1.1.1.1",
+        "domains": [
+          "domain:googleapis.cn",
+          "domain:gstatic.com"
+        ]
+      },
+      {
+        "address": "223.5.5.5",
+        "domains": [
+          "domain:alidns.com",
+          "domain:doh.pub",
+          "domain:dot.pub",
+          "domain:360.cn",
+          "domain:onedns.net",
           "geosite:cn"
         ],
-        "enabled": true
-      },
-      {
-        "id": "5425034033205580637",
-        "type": "field",
-        "outboundTag": "direct",
-        "ip": [
-          "geoip:private",
-          "geoip:cn",
-          "geoip:ir"
+        "expectIPs": [
+          "geoip:cn"
         ],
-        "enabled": true
+        "skipFallback": true
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": false
+      },
+      "tag": "socks"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.17.147.22",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "randomized",
+          "serverName": "UUHuhyYgESDfgh.UyHjhgvgFCjgujhBuILbVFDXdxM.xYZ",
+          "show": false
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "UuhUHYygESDfgh.uYhJhGVgfCjgujhbUiLbVFdXDXM.XyZ"
+          },
+          "path": "/egFIvRfmDaCdL5Uk/ODQuMjM1LjE2OS4yMzQ=?ed=2560/"
+        }
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "interval": "10-20",
+          "length": "50-100",
+          "packets": "tlshello"
+        },
+        "noises": [
+          {
+            "delay": "10-16",
+            "packet": "10-20",
+            "type": "rand"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "sockopt": {
+          "TcpNoDelay": true,
+          "mark": 255
+        }
+      },
+      "tag": "fragment"
+    }
+  ],
+  "remarks": "1🇳🇱✅💎💫 @vmesspv",
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "ip": [
+          "1.1.1.1"
+        ],
+        "outboundTag": "proxy",
+        "port": "53",
+        "type": "field"
       },
       {
-        "id": "5627785659655799759",
-        "type": "field",
-        "port": "0-65535",
+        "ip": [
+          "223.5.5.5"
+        ],
+        "outboundTag": "direct",
+        "port": "53",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "domain:googleapis.cn",
+          "domain:gstatic.com"
+        ],
         "outboundTag": "proxy",
-        "enabled": true
+        "type": "field"
+      },
+      {
+        "network": "udp",
+        "outboundTag": "block",
+        "port": "443",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "223.5.5.5",
+          "223.6.6.6",
+          "2400:3200::1",
+          "2400:3200:baba::1",
+          "119.29.29.29",
+          "1.12.12.12",
+          "120.53.53.53",
+          "2402:4e00::",
+          "2402:4e00:1::",
+          "180.76.76.76",
+          "2400:da00::6666",
+          "114.114.114.114",
+          "114.114.115.115",
+          "114.114.114.119",
+          "114.114.115.119",
+          "114.114.114.110",
+          "114.114.115.110",
+          "180.184.1.1",
+          "180.184.2.2",
+          "101.226.4.6",
+          "218.30.118.6",
+          "123.125.81.6",
+          "140.207.198.6",
+          "1.2.4.8",
+          "210.2.4.8",
+          "52.80.66.66",
+          "117.50.22.22",
+          "2400:7fc0:849e:200::4",
+          "2404:c2c0:85d8:901::4",
+          "117.50.10.10",
+          "52.80.52.52",
+          "2400:7fc0:849e:200::8",
+          "2404:c2c0:85d8:901::8",
+          "117.50.60.30",
+          "52.80.60.30"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "domain:alidns.com",
+          "domain:doh.pub",
+          "domain:dot.pub",
+          "domain:360.cn",
+          "domain:onedns.net"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:cn"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:cn"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
       }
     ]
   }
 },
 
 
-
-
-
 {
-  "remarks": "27🌎✅💎☘️ @vmesspv",
+  "remarks": "2🌎✅💎☘️ @vmesspv",
   "log": {
     "access": "",
     "error": "",
@@ -650,7 +947,184 @@
       }
     ]
   }
+},
+
+
+{
+  "remarks": "3🇺🇸✅💎💫 @vmesspv",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.66.168.210",
+            "port": 443,
+            "users": [
+              {
+                "id": "de94cc0a-0592-4969-b1fc-97ea8f0ea0b3",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "US.kkP.ME.Eu.oRG",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/aa",
+          "headers": {
+            "Host": "US.kkP.ME.Eu.oRG"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "tlshello",
+          "length": "6-9",
+          "interval": "1-2"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5465425548310166497",
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": [
+          "domain:ir",
+          "geosite:cn"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "5425034033205580637",
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": [
+          "geoip:private",
+          "geoip:cn",
+          "geoip:ir"
+        ],
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
+  }
 }
+
+
+
+
 
 
 
