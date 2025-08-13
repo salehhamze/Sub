@@ -1,70 +1,67 @@
 {
-  "dns": {
-    "servers": [
-      "94.140.14.15"
-    ]
+  "remarks": "4🇫🇮✅💎☘️ @vmesspv",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
   },
   "inbounds": [
     {
-      "listen": "127.0.0.1",
+      "tag": "socks",
       "port": 10808,
+      "listen": "127.0.0.1",
       "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
       "sniffing": {
+        "enabled": true,
         "destOverride": [
           "http",
           "tls"
         ],
-        "enabled": true,
         "routeOnly": false
       },
-      "tag": "socks"
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
     },
     {
-      "listen": "127.0.0.1",
+      "tag": "http",
       "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "userLevel": 8
-      },
-      "tag": "http"
-    },
-    {
       "listen": "127.0.0.1",
-      "port": 2081,
       "protocol": "http",
-      "settings": {
-        "userLevel": 8
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
       },
-      "tag": "http-1"
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
     }
   ],
-  "remarks": "🌍✅💎🌤³ @vmesspv وقتی قطع شد بروز رسانی کنید.",
   "outbounds": [
     {
-      "mux": {
-        "concurrency": 1,
-        "enabled": false,
-        "xudpConcurrency": 1,
-        "xudpProxyUDP443": "allow"
-      },
+      "tag": "proxy",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "172.66.40.99",
-            "port": 2052,
+            "address": "digitalocean.com",
+            "port": 443,
             "users": [
               {
+                "id": "eaa140af-47da-4201-a1e2-004833106835",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
                 "encryption": "none",
-                "flow": "",
-                "id": "80d1fe59-60f4-4272-a280-820e1ef0a754",
-                "level": 8,
-                "security": "auto"
+                "flow": ""
               }
             ]
           }
@@ -72,75 +69,103 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "rAYan-ng-2.SaMan.dPDns.oRg",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
         "wsSettings": {
+          "path": "/@Rayan_Config",
           "headers": {
-            "remarks": "𝒄𝒉𝒂𝒏𝒏𝒆𝒍 👉 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 @XV2ry2 آدرس تلگرام",
-            "Host": "hi4.ir.google.com.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.trepaspeedtest.betrat.com.eu.com.sh847.ir.xn--cr8haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.fffffffff.ddns-ip.net.",
-            "User-Agent": "Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.37(KHTML,likeGecko)Chrome/119.0.0.0Safari/537.36"
-          },
-          "path": "/index.html"
+            "Host": "rAYan-ng-2.SaMan.dPDns.oRg"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "tlshello",
+          "length": "6-8",
+          "interval": "1-2"
         }
       },
-      "tag": "proxy"
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
     },
     {
+      "tag": "direct",
       "protocol": "freedom",
-      "settings": {},
-      "tag": "direct"
+      "settings": {}
     },
     {
-      "protocol": "dns",
-      "tag": "dns-out"
-    },
-    {
+      "tag": "block",
       "protocol": "blackhole",
       "settings": {
         "response": {
           "type": "http"
         }
-      },
-      "tag": "block"
+      }
     }
   ],
-  "policy": {
-    "levels": {
-      "8": {
-        "connIdle": 300,
-        "uplinkOnly": 5,
-        "downlinkOnly": 10,
-        "handshake": 4
-      }
-    },
-    "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
-    }
-  },
   "routing": {
     "domainStrategy": "AsIs",
     "rules": [
       {
         "type": "field",
-        "port": "443",
-        "outboundTag": "proxy"
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
       },
       {
+        "id": "5465425548310166497",
         "type": "field",
-        "port": "53",
-        "outboundTag": "dns-out"
+        "outboundTag": "direct",
+        "domain": [
+          "domain:ir",
+          "geosite:cn"
+        ],
+        "enabled": true
       },
       {
+        "id": "5425034033205580637",
         "type": "field",
-        "network": "udp",
-        "outboundTag": "direct"
+        "outboundTag": "direct",
+        "ip": [
+          "geoip:private",
+          "geoip:cn",
+          "geoip:ir"
+        ],
+        "enabled": true
       },
       {
+        "id": "5627785659655799759",
         "type": "field",
-        "network": "tcp",
-        "outboundTag": "proxy"
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
       }
     ]
-  },
-  "stats": {}
+  }
 }
