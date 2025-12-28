@@ -104,4 +104,12 @@ hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@77.90.41.197:35000?security=tls
 hysteria2://dongtaiwang.com@[2001:bc8:32d7:302::11]:20088?security=tls&insecure=1&sni=apple.com#All---11%2033
 hysteria2://Yet-Another-Public-Config-1@206.71.158.37:36300?security=tls&obfs=salamander&obfs-password=Yet-Another-Public-Config-1&insecure=1&sni=YAPC-1.afshin.ir#All--12%2034
 hysteria2://Yet-Another-Public-Config-1@206.71.158.37:35200?security=tls&obfs=salamander&obfs-password=Yet-Another-Public-Config-1&insecure=1&sni=YAPC-1.afshin.ir#All--13%2035
-
+vless://64b2c6ba-012e-4ceb-b16c-df1835c0eedd@trt.fastlynew.hosting-ip.com:80?type=xhttp&security=none&host=maxfr171.global.ssl.fastly.net&path=%2F%3Fed%3D2560#VLESS
+vless://64b2c6ba-012e-4ceb-b16c-df1835c0eedd@trtw.fastlynew.hosting-ip.com:80?type=xhttp&security=none&host=maxpl165.global.ssl.fastly.net&path=%2F%3Fed%3D2560#VLESS
+vless://64b2c6ba-012e-4ceb-b16c-df1835c0eedd@trta.fastlynew.hosting-ip.com:80?type=xhttp&security=none&host=maxfr123.global.ssl.fastly.net&path=%2F%3Fed%3D2560#VLESS
+vless://64b2c6ba-012e-4ceb-b16c-df1835c0eedd@trt.fastlynew.hosting-ip.com:80?type=xhttp&security=none&host=maxde219.global.ssl.fastly.net&path=%2F%3Fed%3D2560#VLESS
+vless://64b2c6ba-012e-4ceb-b16c-df1835c0eedd@trta.fastlynew.hosting-ip.com:80?type=xhttp&security=none&host=maxfr156.global.ssl.fastly.net&path=%2F%3Fed%3D2560#VLESS
+vless://64b2c6ba-012e-4ceb-b16c-df1835c0eedd@51.195.233.191:443?type=xhttp&security=none&host=51.195.233.191&path=%2F%40MaxFree---%40MaxFree---%40MaxFree---%40MaxFree---%40MaxFree#VLESS
+vless://64b2c6ba-012e-4ceb-b16c-df1835c0eedd@asd.fastnew199.hosting-ip.com:80?type=xhttp&security=none&host=maxde22.global.ssl.fastly.net&path=%2F%3Fed%3D2560#VLESS
+vless://64b2c6ba-012e-4ceb-b16c-df1835c0eedd@trt.fastlynew.hosting-ip.com:80?type=xhttp&security=none&host=maxus112.global.ssl.fastly.net&path=%2F%3Fed%3D2560#VLESS
+vless://64b2c6ba-012e-4ceb-b16c-df1835c0eedd@151.101.169.242:80?type=xhttp&security=none&host=maxfr219.global.ssl.fastly.net&path=%2F%3Fed%3D2560#VLESS
