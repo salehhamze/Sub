@@ -84,4 +84,17 @@ hysteria2://b4bd0613-ff7c-4f2f-954d-185915e6ddad@77.90.41.197:35000?security=tls
 hysteria2://dongtaiwang.com@[2001:bc8:32d7:302::11]:20088?security=tls&insecure=1&sni=apple.com#All---11%2033
 hysteria2://Yet-Another-Public-Config-1@206.71.158.37:36300?security=tls&obfs=salamander&obfs-password=Yet-Another-Public-Config-1&insecure=1&sni=YAPC-1.afshin.ir#All--12%2034
 hysteria2://Yet-Another-Public-Config-1@206.71.158.37:35200?security=tls&obfs=salamander&obfs-password=Yet-Another-Public-Config-1&insecure=1&sni=YAPC-1.afshin.ir#All--13%2035
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@vps-f857b922.vps.ovh.net:2052?path=%2F&security=&encryption=none&host=vps-f857b922.vps.ovh.net&fp=firefox&type=ws#%F0%9F%87%AC%F0%9F%87%A7%20UK%20-%20London%20-%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@dl5-de6-cdn.cloud-files-uploader.com:2052?path=%2F&security=&encryption=none&host=dl5-de6-cdn.cloud-files-uploader.com&fp=firefox&type=ws#%F0%9F%87%A9%F0%9F%87%AA%20DE%20-%20Germany%20-%20%28%20VIP%20%29%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@ip50.ip-135-148-11.us:2052?path=%2F&security=&encryption=none&host=ip50.ip-135-148-11.us&fp=firefox&type=ws#%F0%9F%87%BA%F0%9F%87%B8%20USA%20-%20Virginia%20-%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@ip4.ip-54-38-3.eu:2052?path=%2F&security=&encryption=none&host=ip4.ip-54-38-3.eu&fp=firefox&type=ws#%F0%9F%87%AB%F0%9F%87%B7%20FR%20-%20Paris%20-%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@dl5-tr4-cdn.cloud-files-uploader.com:2052?path=%2F&security=&encryption=none&host=dl5-tr4-cdn.cloud-files-uploader.com&fp=firefox&type=ws#%F0%9F%87%B9%F0%9F%87%B7%20TR%20-%20Istanbul%20-%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@dl5-de6-cdn.cloud-files-uploader.com:2052?path=%2F&security=&encryption=none&host=dl5-de6-cdn.cloud-files-uploader.com&fp=firefox&type=ws#%F0%9F%87%AB%F0%9F%87%AE%20FI%20-%20Finland%20-%20%28%20VIP%20%29%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@vps-e7fa62be.vps.ovh.ca:2052?path=%2F&security=&encryption=none&host=vps-e7fa62be.vps.ovh.ca&fp=firefox&type=ws#%F0%9F%87%A8%F0%9F%87%A6%20CA%20-%20Toronto%20-%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@vps-af4906fe.vps.ovh.ca:2052?path=%2F&security=&encryption=none&host=vps-af4906fe.vps.ovh.ca&fp=firefox&type=ws#%F0%9F%87%A6%F0%9F%87%BA%20AU%20-%20Sydney%20-%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@vps-e6645c9a.vps.ovh.net:2052?path=%2F&security=&encryption=none&host=vps-e6645c9a.vps.ovh.net&fp=firefox&type=ws#%F0%9F%87%AE%F0%9F%87%B9%20IT%20-%20Milan%20-%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@vps-8e66b5b2.vps.ovh.net:2052?path=%2F&security=&encryption=none&host=vps-8e66b5b2.vps.ovh.net&fp=firefox&type=ws#%F0%9F%87%A7%F0%9F%87%AA%20BE%20-%20Brussels%20-%20001%20
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@vps-c187ab91.vps.ovh.net:2052?path=%2F&security=&encryption=none&host=vps-c187ab91.vps.ovh.net&fp=firefox&type=ws#%F0%9F%87%B5%F0%9F%87%B1%20PL%20-%20Warsaw%20-%20001
+vless://6c1450ba-b626-4a7a-a238-1e1d5631037f@vps-af4906fe.vps.ovh.ca:2052?path=%2F&security=&encryption=none&host=vps-af4906fe.vps.ovh.ca&fp=firefox&type=ws#%F0%9F%87%B8%F0%9F%87%AC%20SG%20-%20Singapore%20-%20001%20
+vless://f8a6db2e-3cd5-4a9c-ae83-65a1337da847@ec2-16-146-80-110.us-west-2.compute.amazonaws.com:80?path=%2F&security=&encryption=none&host=ec2-16-146-80-110.us-west-2.compute.amazonaws.com&fp=firefox&type=ws#%F0%9F%87%BA%F0%9F%87%B8%20USA%20-%20%28%20AI%20%29%20-%20002
 
