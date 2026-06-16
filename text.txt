@@ -1,3 +1,9 @@
+hysteria2://a9d3f77943aeee7d4dc3fa073c1797d8@dd.openaccessnode.com:989?security=tls&obfs=salamander&obfs-password=%40JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi&insecure=0&sni=dd.ircybersec.org#%40vmesspv
+
+hysteria2://47c7c52a07ff77b3b86bc514edb92602@dd.openaccessnode.com:989?security=tls&obfs=salamander&obfs-password=%40JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi&insecure=0&sni=dd.ircybersec.org#%40vmesspv
+
+vless://47c7c52a-07ff-77b3-b86b-c514edb92602@dd.openaccessnode.com:8225?security=reality&encryption=none&pbk=ECxm-BdHYhxYK9MtN33NkkrFSdFZXp-OB-yhN8AleRY&headerType=none&fp=ios&type=tcp&sni=dnschecker.org&sid=a62d513cd709744a#%40vmesspv
+
 hysteria2://Masir_Sefid@18.196.180.90:443?security=tls&obfs=salamander&obfs-password=Masir_Sefid&insecure=0&sni=qus.masir-sefid.shop#%F0%9F%87%A9%F0%9F%87%AA%E2%9C%85%F0%9F%92%8E%F0%9F%95%8A%EF%B8%8F%C2%B9%20%40vmesspv
 hysteria2://Masir_Sefid@18.196.180.90:444?security=tls&obfs=salamander&obfs-password=Masir_Sefid&insecure=0&sni=qus.masir-sefid.shop#%F0%9F%87%A9%F0%9F%87%AA%E2%9C%85%F0%9F%92%8E%F0%9F%95%8A%EF%B8%8F%C2%B2%20%40vmesspv
 hysteria2://Masir_Sefid@18.196.180.90:8880?security=tls&obfs=salamander&obfs-password=Masir_Sefid&insecure=0&sni=qus.masir-sefid.shop#%F0%9F%87%A9%F0%9F%87%AA%E2%9C%85%F0%9F%92%8E%F0%9F%95%8A%EF%B8%8F%C2%B3%20%40vmesspv
